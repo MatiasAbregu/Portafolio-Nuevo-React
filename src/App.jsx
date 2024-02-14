@@ -7,7 +7,7 @@ import { Frame2 } from './components/Frame2'
 import { Reproductor } from './components/Reproductor'
 import { Carousel } from './components/Carousel'
 import { SocialIcon } from './components/SocialIcon'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Modal } from './components/Modal'
 
 //Habilidades
@@ -226,6 +226,14 @@ function App() {
     document.documentElement.classList.remove("modal-abierto");
   }
 
+  useEffect(() => {
+    document.getElementById("fondo1").style.height = `${document.getElementById("inicio").getBoundingClientRect().height + 10}px`;
+    document.getElementById("fondo2").style.height = `${document.getElementById("proyectos").getBoundingClientRect().height + 10}px`;
+    document.getElementById("fondo3").style.width = `${document.getElementById("Contactame").getBoundingClientRect().width + 300}px`;
+    document.getElementById("fondo3").style.height = `${document.getElementById("Contactame").getBoundingClientRect().height + 60}px`;
+  },
+    [])
+
   return (
     <>
       <Modal estado={estadoModal} contenido={contenidoModal} cerrarModal={desactivarModal} />
@@ -242,7 +250,6 @@ function App() {
         </div>
         <img src="/DragonNombre.png" alt="" id='imgPresentacion' />
       </section>
-      <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
       <section id='habilidades'>
         <Title>Habilidades</Title>
         <br /><br /><br /><br />
@@ -277,7 +284,6 @@ function App() {
           </Frame>
         </div>
       </section>
-      <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
       <section id='proyectos'>
         <br />
         <Title>Proyectos</Title>
@@ -287,7 +293,7 @@ function App() {
           <Frame2 img={Arandu} herramientas={[[Android, "Plata"], [VSCode, "Oro"], [Java, "Oro"], [Node, "Plata"], [HTML, "Oro"], [CSS, "Oro"], [JS, "Oro"],
           [Github, "Oro"], [GIT, "Oro"]]} funcionModal={establecerModal} contenido={[[Arandu, "Debido a que es un proyecto para un cliente no puedo revelar código acerca del mismo pero puedo mostrar muy pocas imágenes de como sería la app. Pero es una app de finanzas desarollada por mi empresa llamada Patito Software."], [Arandu2, "Acá se ve lo que sería el inicio de la aplicación móvil. Desarrollada con Java en AndroidStudio y que contará con una conexión a una Base De Datos."], [Arandu3, "Una página web que contará con Node y también se relacionará con una Base de Datos."]]}>
             Proyecto Arandu </Frame2>
-    
+
           <Frame2 img={Facundo} herramientas={[[Netbeans, "Oro"], [Java, "Oro"], [SQLite, "Oro"], [Github, "Oro"], [GIT, "Oro"]]}
             funcionModal={establecerModal} contenido={[[Facundo2, "Aplicación de gestión de negocio desarrollada en Java y SQLite por mi empresa (la cual yo lidero en el área de programación y ventas). Cuenta con varias funcionalidades que se puede apreciar en el video del final."], [Facundo3, "Interfaz de gestión de usuarios."], [Facundo4, "Interfaz donde se genera un 'comprobante digital simbolico' y que cuenta con varias funcionalides tales como aplicación de descuentos y uso de escaner."], [Facundo5, "Interfaz para administrar clientes y fiados."], [Facundo6, "Interfaz de registro del capital de la empresa."], [Facundo7, "Video"]]}>
             Proyecto Facundo </Frame2>
@@ -302,7 +308,7 @@ function App() {
             Noticiero de Ciberestafa </Frame2>
 
           <Frame2 img={WM1} herramientas={[[LUA, "Plata"]]} funcionModal={establecerModal}
-            contenido={[[WM1, "Uno de los proyectos más interesantes aún en desarrollo que estoy haciendo con un amigo ecuatoriano. Un videojuego en roblox que usa como lenguaje LUAU (Lenguaje que fui aprendiendo sobre la marcha... Programe todo el funcionamiento yo tristemente, mucho código jajaja)"], [WM2, "Customización del personaje."], [WM3, "Código."], [WM4, "Un poco de la aldea."], [WM5, "Más código."], [WM6, "Un poco del desierto."], [WM7 ,"Y más código..."]]}> Wild Monsters </Frame2>
+            contenido={[[WM1, "Uno de los proyectos más interesantes aún en desarrollo que estoy haciendo con un amigo ecuatoriano. Un videojuego en roblox que usa como lenguaje LUAU (Lenguaje que fui aprendiendo sobre la marcha... Programe todo el funcionamiento yo tristemente, mucho código jajaja)"], [WM2, "Customización del personaje."], [WM3, "Código."], [WM4, "Un poco de la aldea."], [WM5, "Más código."], [WM6, "Un poco del desierto."], [WM7, "Y más código..."]]}> Wild Monsters </Frame2>
 
           <Frame2 img={Airlines} herramientas={[[Netbeans, "Oro"], [Java, "Oro"], [HTML, "Oro"], [CSS, "Oro"], [JS, "Oro"], [tomcat, "Oro"],
           [MySQL, "Oro"], [phpmyadmin, "Oro"]]} funcionModal={establecerModal}
@@ -338,7 +344,7 @@ function App() {
             contenido={[[videoNorex, "Video."], [Norex, "Aplicación donde se reserva comida y el pedido es enviado por un socket a otra aplicación que permite ver que es lo que se encargo."], [Norex2, ""], [Norex3, ""], [Norex4, ""], [Norex5, ""], [Norex6, ""]]}> Norex </Frame2>
 
           <Frame2 img={AntPort} herramientas={[[VSCode, "Oro"], [HTML, "Oro"], [CSS, "Oro"], [JS, "Oro"]]} funcionModal={establecerModal}
-            contenido={[[AntPort, "Mi antiguo portafolio, increíble lo que he subido el nivel, ¿No? Jajajaja"], [antPortIMG, ""], [antPortIMG2, ""], [antPortIMG3, ""], [antPortIMG4, ""], [antPortIMG5, ],]}>
+            contenido={[[AntPort, "Mi antiguo portafolio, increíble lo que he subido el nivel, ¿No? Jajajaja"], [antPortIMG, ""], [antPortIMG2, ""], [antPortIMG3, ""], [antPortIMG4, ""], [antPortIMG5,],]}>
             Antiguo Portafolio </Frame2>
 
           <Frame2 img={Paginas} herramientas={[[VSCode, "Oro"], [HTML, "Oro"], [CSS, "Oro"], [JS, "Oro"]]} funcionModal={establecerModal}
@@ -346,7 +352,7 @@ function App() {
             Páginas del Instituto (Prácticos) </Frame2>
 
           <Frame2 img={ProyectosExtras} herramientas={[[Netbeans, "Oro"], [Java, "Oro"]]} funcionModal={establecerModal}
-            contenido={[[ProyectosExtras2, "Muchos de mis primeros proyectos hechos con Java. Algunos por mero entretenimiento y otros probando cosas. Ej. LandNet usa sockets. También he traido uno más reciente que fue el clon del proyecto C# solo que este en Java."], [ProyectosExtras3, ""], [ProyectosExtras4, ""], 
+            contenido={[[ProyectosExtras2, "Muchos de mis primeros proyectos hechos con Java. Algunos por mero entretenimiento y otros probando cosas. Ej. LandNet usa sockets. También he traido uno más reciente que fue el clon del proyecto C# solo que este en Java."], [ProyectosExtras3, ""], [ProyectosExtras4, ""],
             [ProyectosExtras5, ""], [ProyectosExtras6, ""], [ProyectosExtras7, ""], [ProyectosExtras8, ""]]}> Proyectos Extras de Java</Frame2>
 
           <Frame2 img={SVA1} herramientas={[[Android, "Plata"], [Java, "Oro"], [SQLite, "Oro"]]} funcionModal={establecerModal}
@@ -358,7 +364,6 @@ function App() {
             Worline </Frame2>
         </div>
       </section>
-      <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
       <section id='SobreMi'>
         <br />
         <Title>Sobre Mi</Title>
@@ -374,7 +379,6 @@ function App() {
         </div>
         <br />
       </section>
-      <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
       <section id='Contactame'>
         <br />
         <Title>Contactame</Title>
@@ -386,6 +390,7 @@ function App() {
           <SocialIcon iconoNombre={"bi-discord"} direccion={"https://discord.com/users/292346182238470153"}>Discord</SocialIcon>
           <SocialIcon iconoNombre={"bi-envelope"} direccion={"mailto:matiasabregu506@gmail.com"}>Email</SocialIcon>
           <SocialIcon iconoNombre={"bi-instagram"} direccion={"https://www.instagram.com/matias_abregu08/"}>Instagram</SocialIcon>
+  
         </div>
       </section>
       <br /><br /><br /><br />

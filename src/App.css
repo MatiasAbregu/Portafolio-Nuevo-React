@@ -22,7 +22,7 @@ section {
 
 #reproductor iframe {
     transition: ease 1s;
-    width: 32%;
+    width: 80%;
 }
 
 #reproductor span {
@@ -331,7 +331,7 @@ nav a:hover p {
 /* Carousel */
 .cajaPresentacion.sobremi {
     width: 60%;
-    height: 600px;
+    height: 100%;
     font-size: 1.3rem;
 }
 
@@ -360,10 +360,10 @@ nav a:hover p {
 .carouselDiv {
     position: absolute;
     right: 0;
-    margin: 1% 2%;
     transition: transform 1s ease;
     opacity: 0;
     white-space: pre-line;
+    width: 0%;
 }
 
 .letraCarousel.der,
@@ -383,15 +383,15 @@ nav a:hover p {
     opacity: 1;
 }
 
-.carousel div {
-    width: 10%;
+.letraCarousel.activo {
+    width: 100%;
 }
 
-.carousel div.activo {
+.carouselDiv.activo {
     width: 70%;
 }
 
-.carousel div img {
+.carouselDiv img {
     width: 100%;
     border-radius: 20px;
 }
@@ -483,6 +483,7 @@ nav a:hover p {
 footer {
     text-align: center;
     font-family: 'Tekur', sans-serif;
+    width: 105%;
 }
 
 footer h1 {
@@ -496,7 +497,7 @@ footer h1 {
 }
 
 .modal.mostrar {
-    z-index: 4;
+    z-index: 101;
     display: block;
     position: absolute;
     width: 100%;
@@ -624,1313 +625,56 @@ footer h1 {
 
 /* Medias */
 
-@media screen and (max-width: 320px) {
+@media screen and (min-width: 320px) and (max-width: 500px) {
 
     /* Contenedores */
-
     section {
-        display: flex;
-        width: 100%;
-        margin-left: 7%;
-        align-items: center;
-        justify-content: center;
-    }
-
-    #inicio {
-        flex-wrap: wrap;
-        width: 100%;
-        margin: 7% 0 0 13%;
-    }
-
-    #habilidades,
-    #proyectos,
-    #SobreMi,
-    #Contactame {
-        width: 100%;
-    }
-
-    #habilidades {
-        margin: 7% 0 0 13%;
-    }
-
-    #proyectos {
-        margin: 0 0 0 12%;
-    }
-
-    #SobreMi {
-        width: 105%;
-        margin: 0 0 0 8%;
-    }
-
-    #Contactame {
-        margin: 0 0 0 13%;
-    }
-
-    #cajaSobreMi {
-        flex-wrap: wrap;
-    }
-
-    /* NavigatorBar */
-    nav {
-        font-family: 'Genos', sans-serif;
-        position: fixed;
-        top: 2%;
-        margin: 0 5%;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-        align-items: center;
-        width: 90%;
-        background-color: #111;
-        padding: 0%;
-        box-shadow: 0px 0px 3px 5px #a52112;
-        border-radius: 40px;
-        transition: ease 0.3s;
-        z-index: 10;
-    }
-
-    nav:hover {
-        margin: 0 3%;
-        padding: 1.25% 0.8%;
-        transition: ease 0.6s;
-    }
-
-    /* NavIcon */
-    nav a {
-        margin: 3% 0;
-        color: white;
-        text-align: center;
-        transition: ease 0.5s;
-        text-decoration: none;
-    }
-
-    nav a p {
-        margin: 0 0 1% 0;
-        display: none;
-        font-size: 1.5rem;
-    }
-
-    /* Reproductor */
-
-    #reproductor {
-        position: fixed;
-        top: 12%;
-        display: flex;
-        width: 100%;
-        z-index: 1;
-        justify-content: end;
-    }
-
-    #reproductor iframe {
-        transition: ease 1s;
-        width: 90%;
-    }
-
-    #reproductor span {
-        font-size: 2rem;
-        background-color: rgb(40, 40, 40);
-        height: 30%;
-        margin: 4% -0.5%;
-        border-bottom-left-radius: 20px;
-        border-top-left-radius: 20px;
-        padding: 2% 3%;
-        border: 1px solid white;
-        cursor: pointer;
-    }
-
-    /* Caja presentacion */
-
-    .cajaPresentacion {
-        margin-left: 1%;
-    }
-
-    .cajaPresentacion h3 {
-        margin: 6% 5% 0 0;
-    }
-
-    .cajaPresentacion h2 {
-        margin: 5% 5%;
-    }
-
-    #imgPresentacion {
-        margin-top: 6%;
-        width: 102%;
-    }
-
-    /* Cajas Habilidades */
-    .frameBorde {
-        text-align: center;
-        width: 100%;
-        margin: 7% 0;
-    }
-
-    .frameBorde legend {
-        font-size: 3rem;
-    }
-
-    /* Iconos Habilidades */
-    .IconosHab {
-        border-radius: 20px;
-        margin: 4% 0.1% 2% 0.1%;
-        transition: ease 0.4s;
-        width: 80%;
-    }
-
-    /* Caja Proyectos y relacionados*/
-    .cajaProyecto {
-        width: 100%;
-        margin: 4% 0;
-    }
-
-    .cajaProyecto p {
-        margin: 0 20%;
-        margin-top: 3%;
-        background: linear-gradient(90deg, #773e94, #3b2049);
-        border-radius: 50px;
-        width: 60%;
-        padding: 3% 0;
-    }
-
-    .proyectoImg {
-        width: 100%;
-        background: url('./effects/glitch.gif');
-        padding: 1.5%;
-        border-top-right-radius: 30px;
-        border-bottom-left-radius: 30px;
-    }
-
-    /* Carousel */
-    .cajaPresentacion.sobremi {
-        width: 95%;
-        height: 1050px;
-    }
-
-    .carousel-img {
-        width: 100%;
-        margin-left: 5%;
-        margin-top: 8%;
-    }
-
-    .carousel {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        overflow: hidden;
-    }
-
-    .carousel div.activo {
-        width: 100%;
-    }
-
-    .carousel div img {
-        width: 100%;
-        border-radius: 20px;
-    }
-
-    /* Contactame */
-    #cajaIconos {
-        width: 100%;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-        font-family: 'Enchanted Land', sans-serif;
-    }
-
-    #cajaIconos a {
-        text-align: center;
-        text-decoration: none;
-        width: 100%;
-        padding-top: 10%;
-        border-top-left-radius: 100px;
-        border-bottom-right-radius: 100px;
-        color: white;
-        margin: 3% 0;
-    }
-
-    /* Footer */
-    footer {
-        margin: 0 12%;
-        width: 100%;
-        text-align: center;
-        font-family: 'Tekur', sans-serif;
-    }
-
-    footer h1 {
-        font-size: 2rem;
-        animation: footer-anim linear infinite 3s;
-    }
-
-    /* Modal */
-    .modal {
-        display: none;
-    }
-
-    /* .modal.mostrar {
-        z-index: 100;
-        display: block;
-        position: absolute;
-        width: 100%;
-        height: 100vh;
-        background: linear-gradient(#773e94, black);
-    } */
-
-    .cuadroModal {
-        display: flex;
-        flex-direction: column;
-        margin: 20% 5%;
-        width: 85%;
-        height: 85vh;
-        font-family: 'Tektur', sans-serif;
-        border: 2px solid white;
-        border-radius: 20px;
-        padding: 1.5%;
-    }
-
-    .cuadroModal .carousel {
-        width: 100%;
-        margin: 0 8%;
-    }
-
-    .cuadroModal .carousel video,
-    .cuadroModal .carousel img {
-        width: 100%;
-        border-radius: 20px;
-        border: 2px solid white;
-    }
-
-    .cuadroModal .carousel p {
-        user-select: text;
-        color: white;
-    }
-
-    .cuadroModal span {
-        cursor: pointer;
-        font-size: 1.3rem;
-        margin-left: 1%;
-    }
-
-    .cuadroModal .carousel-img {
-        margin: 25% 0;
-    }
-
-    /* Animaciones */
-
-    @keyframes shadow-box-pres {
-
-        0%,
-        100% {
-            box-shadow: 0px 0px 4px 12px #ff8401;
-        }
-
-        50% {
-            box-shadow: 0px 0px 3px 5px #a52112;
-        }
-    }
-
-    @keyframes shadow-blue-box-pres {
-
-        0%,
-        100% {
-            box-shadow: 0px 0px 4px 12px #089dd4;
-        }
-
-        50% {
-            box-shadow: 0px 0px 3px 5px #1a6a87;
-        }
-    }
-}
-
-@media screen and (min-width: 375px) and (max-width: 425px) {
-
-    /* Contenedores */
-
-    section {
-        display: flex;
-        width: 90%;
-        margin: 0 5%;
-        align-items: center;
-        justify-content: center;
-    }
-
-    #inicio {
-        flex-wrap: wrap;
-        margin: 7% 0 0 4%;
-        width: 100%;
-    }
-
-    #habilidades {
-        width: 98%;
-    }
-
-    #proyectos {
-        margin: 0 0 0 9%;
-    }
-
-    #SobreMi {
-        width: 97%;
-    }
-
-    #Contactame {
-        width: 100%;
-    }
-
-    #cajaSobreMi {
-        flex-wrap: wrap;
-    }
-
-    /* NavigatorBar */
-    nav {
-        top: 2%;
-        margin: 0 4%;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-        width: 92%;
-        background-color: #111;
-        padding: 0%;
-        z-index: 10;
-    }
-
-    nav:hover {
-        margin: 0 3%;
-        padding: 1.25% 0.8%;
-        transition: ease 0.6s;
-    }
-
-    /* NavIcon */
-    nav a {
-        margin: 3% 0;
-        color: white;
-        text-align: center;
-        transition: ease 0.5s;
-        text-decoration: none;
-    }
-
-    nav a p {
-        margin: 0 0 1% 0;
-        display: none;
-        font-size: 1.5rem;
-    }
-
-    /* Reproductor */
-
-    #reproductor {
-        position: fixed;
-        top: 14%;
-        display: flex;
-        width: 100%;
-        z-index: 1;
-        justify-content: end;
-    }
-
-    #reproductor iframe {
-        transition: ease 1s;
-        width: 80%;
-    }
-
-    #reproductor span {
-        font-size: 2rem;
-        background-color: rgb(40, 40, 40);
-        height: 30%;
-        margin: 4% -0.5%;
-        border-bottom-left-radius: 20px;
-        border-top-left-radius: 20px;
-        padding: 2% 3%;
-        border: 1px solid white;
-        cursor: pointer;
-    }
-
-    /* Caja presentacion */
-
-    .cajaPresentacion {
-        margin-left: 1%;
-    }
-
-    .cajaPresentacion h3 {
-        margin: 6% 5% 0 0;
-    }
-
-    .cajaPresentacion h2 {
-        margin: 5% 5%;
-    }
-
-    #imgPresentacion {
-        margin-top: 6%;
-        width: 102%;
-    }
-
-    /* Cajas Habilidades */
-    .frameBorde {
-        text-align: center;
-        width: 100%;
-        margin: 7% 0;
-    }
-
-    .frameBorde legend {
-        font-size: 3rem;
-    }
-
-    /* Iconos Habilidades */
-    .IconosHab {
-        border-radius: 20px;
-        margin: 4% 0.1% 2% 0.1%;
-        transition: ease 0.4s;
-        width: 80%;
-    }
-
-    /* Caja Proyectos y relacionados*/
-    .cajaProyecto {
-        width: 100%;
-        margin: 4% 0;
-    }
-
-    .cajaProyecto p {
-        margin: 0 20%;
-        margin-top: 3%;
-        background: linear-gradient(90deg, #773e94, #3b2049);
-        border-radius: 50px;
-        width: 60%;
-        padding: 3% 0;
-    }
-
-    .proyectoImg {
-        width: 100%;
-        background: url('./effects/glitch.gif');
-        padding: 1.5%;
-        border-top-right-radius: 30px;
-        border-bottom-left-radius: 30px;
-    }
-
-    /* Carousel */
-
-    .cajaPresentacion.sobremi {
-        width: 95%;
-        height: 900px;
-    }
-
-    .carousel-img {
-        width: 100%;
-        margin-left: 5%;
-        margin-top: 8%;
-    }
-
-    .carousel {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        overflow: hidden;
-    }
-
-    .carousel div.activo {
-        width: 100%;
-    }
-
-    .carousel div img {
-        width: 100%;
-        border-radius: 20px;
-    }
-
-    /* Contactame */
-    #cajaIconos {
-        width: 100%;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-        font-family: 'Enchanted Land', sans-serif;
-    }
-
-    #cajaIconos a {
-        text-align: center;
-        text-decoration: none;
-        width: 100%;
-        padding-top: 10%;
-        border-top-left-radius: 100px;
-        border-bottom-right-radius: 100px;
-        color: white;
-        margin: 3% 0;
-    }
-
-    /* Footer */
-    footer {
-        margin: 0 10%;
-        width: 90%;
-        text-align: center;
-        font-family: 'Tekur', sans-serif;
-    }
-
-    footer h1 {
-        font-size: 2rem;
-        animation: footer-anim linear infinite 3s;
-    }
-
-    /* Modal */
-    .modal {
-        display: none;
-    }
-
-    /* .modal.mostrar {
-        z-index: 100;
-        display: block;
-        position: absolute;
-        width: 100%;
-        height: 100vh;
-        background: linear-gradient(#773e94, black);
-    }
-
-    .cuadroModal {
-        display: flex;
-        flex-direction: column;
-        margin: 20% 4%;
-        width: 88%;
-        height: 85vh;
-        font-family: 'Tektur', sans-serif;
-        border: 2px solid white;
-        border-radius: 20px;
-        padding: 1.5%;
-    } */
-
-    .cuadroModal .carousel {
-        width: 100%;
-        margin: 0 8%;
-    }
-
-    .cuadroModal .carousel video,
-    .cuadroModal .carousel img {
-        width: 100%;
-        border-radius: 20px;
-        border: 2px solid white;
-    }
-
-    .cuadroModal .carousel p {
-        user-select: text;
-        color: white;
-    }
-
-    .cuadroModal span {
-        cursor: pointer;
-        font-size: 1.3rem;
-        margin-left: 1%;
-    }
-
-    .cuadroModal .carousel-img {
-        margin: 25% 0;
-    }
-
-    /* Animaciones */
-
-    @keyframes shadow-box-pres {
-
-        0%,
-        100% {
-            box-shadow: 0px 0px 4px 12px #ff8401;
-        }
-
-        50% {
-            box-shadow: 0px 0px 3px 5px #a52112;
-        }
-    }
-
-    @keyframes shadow-blue-box-pres {
-
-        0%,
-        100% {
-            box-shadow: 0px 0px 4px 12px #089dd4;
-        }
-
-        50% {
-            box-shadow: 0px 0px 3px 5px #1a6a87;
-        }
-    }
-}
-
-@media screen and (min-width: 425px) and (max-width: 768px) {
-
-    /* Contenedores */
-
-    section {
-        display: flex;
-        width: 100%;
-        align-items: center;
-        justify-content: center;
-    }
-
-    #inicio {
-        flex-wrap: wrap;
-        margin: 7% 0 0 11%;
-    }
-
-    #habilidades,
-    #proyectos {
-        margin: 0 0 0 12%;
-    }
-
-    #SobreMi {
-        width: 116%;
-        margin: 0 0 0 5%;
-    }
-
-    #Contactame {
-        width: 111%;
-    }
-
-    #cajaSobreMi {
-        flex-wrap: wrap;
-    }
-
-    /* NavigatorBar */
-    nav {
-        top: 2%;
-        margin: 0 4%;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-        width: 92%;
-        background-color: #111;
-        padding: 0%;
-        z-index: 10;
-    }
-
-    nav:hover {
-        margin: 0 3%;
-        padding: 1.25% 0.8%;
-        transition: ease 0.6s;
-    }
-
-    /* NavIcon */
-    nav a {
-        margin: 3% 0;
-        color: white;
-        text-align: center;
-        transition: ease 0.5s;
-        text-decoration: none;
-    }
-
-    nav a p {
-        margin: 0 0 1% 0;
-        display: none;
-        font-size: 1.5rem;
-    }
-
-    /* Reproductor */
-
-    #reproductor {
-        position: fixed;
-        top: 15%;
-        display: flex;
-        width: 100%;
-        z-index: 1;
-        justify-content: end;
-    }
-
-    #reproductor iframe {
-        transition: ease 1s;
-        width: 80%;
-    }
-
-    #reproductor span {
-        font-size: 2rem;
-        background-color: rgb(40, 40, 40);
-        height: 30%;
-        margin: 4% -0.5%;
-        border-bottom-left-radius: 20px;
-        border-top-left-radius: 20px;
-        padding: 2% 3%;
-        border: 1px solid white;
-        cursor: pointer;
-    }
-
-    /* Caja presentacion */
-
-    .cajaPresentacion {
-        margin-left: 1%;
-    }
-
-    .cajaPresentacion h3 {
-        margin: 6% 5% 0 0;
-    }
-
-    .cajaPresentacion h2 {
-        margin: 5% 5%;
-    }
-
-    #imgPresentacion {
-        margin-top: 6%;
-        width: 102%;
-    }
-
-    /* Cajas Habilidades */
-    .frameBorde {
-        text-align: center;
-        width: 100%;
-        margin: 7% 0;
-    }
-
-    .frameBorde legend {
-        font-size: 3rem;
-    }
-
-    /* Iconos Habilidades */
-    .IconosHab {
-        border-radius: 20px;
-        margin: 4% 0.1% 2% 0.1%;
-        transition: ease 0.4s;
-        width: 80%;
-    }
-
-    /* Caja Proyectos y relacionados*/
-    .cajaProyecto {
-        width: 97%;
-        margin: 4% 0;
-    }
-
-    .cajaProyecto p {
-        margin: 0 20%;
-        margin-top: 3%;
-        background: linear-gradient(90deg, #773e94, #3b2049);
-        border-radius: 50px;
-        width: 60%;
-        padding: 3% 0;
-    }
-
-    .proyectoImg {
-        width: 100%;
-        background: url('./effects/glitch.gif');
-        padding: 1.5%;
-        border-top-right-radius: 30px;
-        border-bottom-left-radius: 30px;
-    }
-
-    /* Carousel */
-
-    .cajaPresentacion.sobremi {
-        width: 86%;
-        height: 880px;
-    }
-
-    .carousel-img {
-        width: 90%;
-        margin-top: 8%;
-    }
-
-    .carousel {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        overflow: hidden;
-    }
-
-    .carousel div.activo {
-        width: 100%;
-    }
-
-    .carousel div img {
-        width: 100%;
-        border-radius: 20px;
-    }
-
-    /* Contactame */
-    #cajaIconos {
-        width: 100%;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-        font-family: 'Enchanted Land', sans-serif;
-    }
-
-    #cajaIconos a {
-        text-align: center;
-        text-decoration: none;
-        width: 100%;
-        padding-top: 10%;
-        border-top-left-radius: 100px;
-        border-bottom-right-radius: 100px;
-        color: white;
-        margin: 3% 0;
-    }
-
-    /* Footer */
-    footer {
         margin: 0;
-        margin-left: 2%;
-        width: 117%;
-        text-align: center;
-        font-family: 'Tekur', sans-serif;
     }
 
-    footer h1 {
-        font-size: 2rem;
-        animation: footer-anim linear infinite 3s;
+    #reproductor {
+        top: 15%;
     }
 
-    /* Modal */
-    .modal {
-        display: none;
-    }
-
-    /* .modal.mostrar {
-        z-index: 100;
-        display: block;
-        position: absolute;
-        width: 100%;
-        height: 100vh;
-        background: linear-gradient(#773e94, black);
-    }
-
-    .cuadroModal {
-        display: flex;
-        flex-direction: column;
-        margin: 20% 5%;
-        width: 85%;
-        height: 85vh;
-        font-family: 'Tektur', sans-serif;
-        border: 2px solid white;
-        border-radius: 20px;
-        padding: 1.5%;
-    } */
-
-    .cuadroModal .carousel {
-        width: 100%;
-        margin: 0 8%;
-    }
-
-    .cuadroModal .carousel video,
-    .cuadroModal .carousel img {
-        width: 100%;
-        border-radius: 20px;
-        border: 2px solid white;
-    }
-
-    .cuadroModal .carousel p {
-        user-select: text;
-        color: white;
-    }
-
-    .cuadroModal span {
-        cursor: pointer;
-        font-size: 1.3rem;
-        margin-left: 1%;
-    }
-
-    .cuadroModal .carousel-img {
-        margin: 25% 0;
-    }
-
-    /* Animaciones */
-
-    @keyframes shadow-box-pres {
-
-        0%,
-        100% {
-            box-shadow: 0px 0px 4px 12px #ff8401;
-        }
-
-        50% {
-            box-shadow: 0px 0px 3px 5px #a52112;
-        }
-    }
-
-    @keyframes shadow-blue-box-pres {
-
-        0%,
-        100% {
-            box-shadow: 0px 0px 4px 12px #089dd4;
-        }
-
-        50% {
-            box-shadow: 0px 0px 3px 5px #1a6a87;
-        }
-    }
-}
-
-@media screen and (min-width: 768px) and (max-width: 1024px) {
-    /* Contenedores */
-
-    section {
-        display: flex;
-        width: 100%;
-        align-items: center;
-        justify-content: center;
+    #reproductor span {
+        height: 25%;
+        margin: 3% -0.5% 3% 0;
+        padding: 2% 3%;
     }
 
     #inicio {
         flex-wrap: wrap;
-    }
-
-    #SobreMi {
-        margin-left: 15%;
         width: 100%;
-    }
-
-    #Contactame {
-        margin-left: 15%;
-        width: 100%;
-    }
-
-    #cajaSobreMi {
-        flex-wrap: wrap;
-    }
-
-    /* NavigatorBar */
-    nav {
-        top: 2%;
-        margin: 0 4%;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-        width: 92%;
-        background-color: #111;
-        padding: 0%;
-        z-index: 10;
-    }
-
-    nav:hover {
-        margin: 0 3%;
-        padding: 1.25% 0.8%;
-        transition: ease 0.6s;
-    }
-
-    /* NavIcon */
-    nav a {
-        margin: 2% 0;
-        color: white;
-        text-align: center;
-        transition: ease 0.5s;
-        text-decoration: none;
-    }
-
-    nav a p {
-        margin: 0 0 1% 0;
-        display: none;
-        font-size: 1.5rem;
-    }
-
-    /* Reproductor */
-
-    #reproductor {
-        position: fixed;
-        top: 15%;
-        display: flex;
-        width: 100%;
-        z-index: 1;
-        justify-content: end;
-    }
-
-    #reproductor iframe {
-        transition: ease 1s;
-        height: 200px;
-        width: 80%;
-    }
-
-    #reproductor span {
-        font-size: 2rem;
-        background-color: rgb(40, 40, 40);
-        height: 30%;
-        margin: 4% -0.5%;
-        border-bottom-left-radius: 20px;
-        border-top-left-radius: 20px;
-        padding: 2% 3%;
-        border: 1px solid white;
-        cursor: pointer;
-    }
-
-    /* Caja presentacion */
-
-    .cajaPresentacion {
-        margin-left: 1%;
-    }
-
-    .cajaPresentacion h3 {
-        margin: 6% 5% 0 0;
-    }
-
-    .cajaPresentacion h2 {
-        margin: 5% 5%;
-    }
-
-    #imgPresentacion {
-        margin-top: 6%;
-        width: 100%;
-    }
-
-    /* Cajas Habilidades */
-    .frameBorde {
-        text-align: center;
-        width: 100%;
-        margin: 7% 0;
-    }
-
-    .frameBorde legend {
-        font-size: 3rem;
-    }
-
-    /* Iconos Habilidades */
-    .IconosHab {
-        border-radius: 20px;
-        margin: 4% 0.1% 2% 0.1%;
-        transition: ease 0.4s;
-        width: 40%;
-    }
-
-    /* Caja Proyectos y relacionados*/
-    .cajaProyecto {
-        width: 97%;
-        margin: 4% 0;
-    }
-
-    .cajaProyecto p {
-        margin: 0 20%;
-        margin-top: 3%;
-        background: linear-gradient(90deg, #773e94, #3b2049);
-        border-radius: 50px;
-        width: 60%;
-        padding: 3% 0;
-        font-size: 1.5rem;
-    }
-
-    .proyectoImg {
-        width: 100%;
-        background: url('./effects/glitch.gif');
-        padding: 1.5%;
-        border-top-right-radius: 30px;
-        border-bottom-left-radius: 30px;
-    }
-
-    /* Carousel */
-
-    .cajaPresentacion.sobremi {
-        width: 86%;
-        height: 750px;
-        font-size: 1.3rem;
-    }
-
-    .carousel-img {
-        width: 100%;
-        margin-top: 8%;
-        margin-right: 5%;
-    }
-
-    .carousel {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        overflow: hidden;
-    }
-
-    .carousel div.activo {
-        width: 100%;
-    }
-
-    .carousel div img {
-        width: 100%;
-        border-radius: 20px;
-    }
-
-    /* Contactame */
-    #cajaIconos {
-        width: 100%;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-        font-family: 'Enchanted Land', sans-serif;
-    }
-
-    #cajaIconos a {
-        text-align: center;
-        text-decoration: none;
-        width: 40%;
-        padding-top: 10%;
-        border-top-left-radius: 100px;
-        border-bottom-right-radius: 100px;
-        color: white;
-        margin: 3% 0;
-    }
-
-    /* Footer */
-    footer {
-        margin: 0 0%;
-        width: 120%;
-        text-align: center;
-        font-family: 'Tekur', sans-serif;
-    }
-
-    footer h1 {
-        font-size: 2rem;
-        animation: footer-anim linear infinite 3s;
-    }
-
-    /* Modal */
-    .modal {
-        display: none;
-    }
-
-    /* .modal.mostrar {
-        z-index: 100;
-        display: block;
-        position: absolute;
-        width: 100%;
-        height: 100vh;
-        background: linear-gradient(#773e94, black);
-    }
-
-    .cuadroModal {
-        display: flex;
-        flex-direction: column;
-        margin: 5% 5%;
-        width: 88%;
-        height: 120vh;
-        font-family: 'Tektur', sans-serif;
-        border: 2px solid white;
-        border-radius: 20px;
-        padding: 1.5%;
-    } */
-
-    .cuadroModal .carousel {
-        width: 100%;
-        margin: 0 8%;
-    }
-
-    .cuadroModal .carousel video,
-    .cuadroModal .carousel img {
-        width: 100%;
-        border-radius: 20px;
-        border: 2px solid white;
-    }
-
-    .cuadroModal .carousel p {
-        user-select: text;
-        color: white;
-    }
-
-    .cuadroModal span {
-        cursor: pointer;
-        font-size: 1.3rem;
-        margin-left: 1%;
-    }
-
-    .cuadroModal .carousel-img {
-        margin: 25% 0;
-    }
-
-    /* Animaciones */
-
-    @keyframes shadow-box-pres {
-
-        0%,
-        100% {
-            box-shadow: 0px 0px 4px 12px #ff8401;
-        }
-
-        50% {
-            box-shadow: 0px 0px 3px 5px #a52112;
-        }
-    }
-
-    @keyframes shadow-blue-box-pres {
-
-        0%,
-        100% {
-            box-shadow: 0px 0px 4px 12px #089dd4;
-        }
-
-        50% {
-            box-shadow: 0px 0px 3px 5px #1a6a87;
-        }
-    }
-}
-
-@media screen and (min-width: 1024px) and (max-width: 1368px) {
-
-    /* Contenedores */
-    section {
-        display: flex;
-        margin: 0 2% 0 12%;
-        align-items: center;
-        justify-content: space-between;
-    }
-
-    #reproductor {
-        position: fixed;
-        width: 100%;
-        top: 3%;
-        display: flex;
-        z-index: 1;
-        justify-content: end;
-    }
-
-    #reproductor iframe {
-        transition: ease 1s;
-        width: 50%;
-    }
-
-    #reproductor span {
-        font-size: 2rem;
-        background-color: rgb(40, 40, 40);
-        height: 25%;
-        margin: 0.5% -0.5% 0.5% 0;
-        border-bottom-left-radius: 20px;
-        border-top-left-radius: 20px;
-        padding: 1% 1.2%;
-        border: 1px solid white;
-        cursor: pointer;
-    }
-
-    #inicio{
-        flex-wrap: nowrap;
-        margin-top: 7%;
+        margin-top: 15%;
     }
 
     #habilidades,
     #proyectos,
-    #SobreMi,
-    #Contactame {
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    #proyectos,
-    #Contactame {
-        position: relative;
-    }
-
-    .cajas {
-        display: flex;
-        flex-wrap: wrap;
+    #SobreMi {
         width: 100%;
     }
 
-    #proyectos .cajas {
-        flex-direction: row;
+    #proyectos {
+        margin: 0 3%;
     }
 
     #cajaSobreMi {
-        display: flex;
-        flex-wrap: nowrap;
-        width: 100%;
+        flex-wrap: wrap;
     }
 
     /* Presentacion */
     .cajaPresentacion {
-        text-align: center;
-        font-family: 'Tektur', sans-serif;
-        animation: shadow-box-pres backwards infinite 1.5s;
-        border-radius: 10px;
-        padding: 1% 4%;
-        background-color: #111;
+        width: 90%;
+        margin: 5%;
     }
 
     .cajaPresentacion h1,
     footer h1 {
-        background: linear-gradient(#ffbf80, #ff8401, #a52112);
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        font-size: 3.2rem;
-        animation: fade linear infinite 5s;
+        font-size: 3rem;
     }
 
     .cajaPresentacion h3 {
-        font-family: 'Enchanted Land', sans-serif;
-        font-size: 3.2rem;
-        margin-bottom: -1%;
+        font-size: 3rem;
     }
 
     .cajaPresentacion h2 {
@@ -1938,29 +682,706 @@ footer h1 {
     }
 
     #imgPresentacion {
-        width: 40%;
+        width: 100%;
         animation: dragonImg linear infinite 1.5s;
     }
 
     /* NavigatorBar */
     nav {
-        font-family: 'Genos', sans-serif;
-        position: fixed;
-        top: 20%;
-        margin-left: 1%;
+        top: 2%;
+        margin: 0 5%;
+        flex-direction: row;
+        justify-content: space-evenly;
+        width: 90%;
+        padding: 0%;
+        z-index: 10;
+    }
+
+    nav:hover {
+        margin: 0 3%;
+        padding: 1.25% 0.8%;
+        transition: ease 0.6s;
+    }
+
+    /* NavIcon */
+    nav a {
+        margin: 4% 0 2% 0;
+    }
+
+    nav a p {
+        margin: 0 0 1% 0;
+        font-size: 1.3rem;
+    }
+
+    .iconosNav {
+        font-size: 3.2rem;
+        margin-left: 2.5%;
+    }
+
+    /* Titulos */
+    .titulos {
+        font-size: 3.3rem;
+    }
+
+    /* Cajas Habilidades */
+    .frameBorde {
+        width: 80%;
+        margin: 8% 10%;
+        padding: 5% 0;
+    }
+
+    .frameBorde legend {
+        font-size: 2.5rem;
+    }
+
+    /* Iconos Habilidades */
+    .IconosHab {
+        margin: 2% 0.1%;
+        width: 90%;
+    }
+
+    .IconosHab p {
+        font-size: 1.6rem;
+    }
+
+    /* Caja Proyectos y relacionados*/
+    .cajaProyecto {
+        width: 90%;
+        margin: 5% 0;
+    }
+
+    .cajaProyecto p {
+        width: 80%;
+        margin: 0 14%;
+        margin-top: 5%;
+        padding: 3% 0;
+        font-size: 1.1rem;
+    }
+
+    .proyectoImg {
+        width: 100%;
+        padding: 2%;
+    }
+
+    .cajaProyecto:hover .cajaHerramientas {
+        margin-left: 7%;
+    }
+
+    .IconosHerr {
+        margin: 0% 0.1%;
+        width: 8%;
+        padding: 0.8% 2%;
+    }
+
+    /* Carousel */
+    .cajaPresentacion.sobremi {
+        width: 100%;
+        height: 100%;
+        font-size: 1.3rem;
+        padding: 10% 0;
+    }
+
+    .cajaPresentacion.sobremi h1 {
+        font-size: 2rem;
+        margin: 0 0 10% 0;
+    }
+
+    .carousel-img {
+        width: 100%;
+        text-align: center;
+        margin-top: 10%;
+        margin-right: 4%;
+        overflow: hidden;
+    }
+
+    .carouselDiv.activo {
+        width: 80%;
+    }
+
+    /* Contactame */
+    #cajaIconos {
+        width: 100%;
+    }
+
+    #cajaIconos a {
+        width: 80%;
+        padding-top: 8%;
+    }
+
+    /* Footer */
+    footer{
+        margin-top: 10%;
+        width: 100%;
+    }
+
+    footer h1 {
+        font-size: 1.5rem;
+    }
+
+    /* Modal */
+    .cuadroModal {
+        margin: 3% 3%;
+        width: 90%;
+        height: 90vh;
+    }
+
+    .cuadroModal .carousel {
+        width: 105%;
+        height: 80vh;
+        margin: 0%;
+    }
+
+    @keyframes shadow-box-pres {
+
+        0%,
+        100% {
+            box-shadow: 0px 0px 6px 10px #ff8401;
+        }
+
+        50% {
+            box-shadow: 0px 0px 3px 5px #a52112;
+        }
+    }
+
+    @keyframes shadow-blue-box-pres {
+
+        0%,
+        100% {
+            box-shadow: 0px 0px 8px 14px #089dd4;
+        }
+
+        50% {
+            box-shadow: 0px 0px 3px 5px #1a6a87;
+        }
+    }
+}
+
+@media screen and (min-width: 500px) and (max-width: 768px) {
+
+    section {
+        margin: 0;
+    }
+
+    #reproductor {
+        top: 15%;
+    }
+
+    #reproductor span {
+        height: 25%;
+        margin: 2% -0.5% 2% 0;
+        padding: 1% 2%;
+    }
+
+    #inicio {
+        flex-wrap: wrap;
+        width: 90%;
+        margin: 5% 5.5%;
+    }
+
+    #habilidades,
+    #proyectos,
+    #SobreMi {
+        width: 100%;
+        margin: 0 1%;
+    }
+
+    #proyectos {
+        margin: 0 3%;
+    }
+
+    #cajaSobreMi {
+        flex-wrap: wrap;
+    }
+
+    /* Presentacion */
+    .cajaPresentacion {
+        width: 95%;
+        margin: 2.5%;
+    }
+
+    .cajaPresentacion h1,
+    footer h1 {
+        font-size: 3.2rem;
+    }
+
+    .cajaPresentacion h3 {
+        font-size: 3rem;
+    }
+
+    .cajaPresentacion h2 {
+        font-size: 2rem;
+    }
+
+    #imgPresentacion {
+        width: 100%;
+    }
+
+    /* NavigatorBar */
+    nav {
+        top: 2%;
+        margin: 0 5%;
+        flex-direction: row;
+        justify-content: space-evenly;
+        width: 90%;
+        padding: 0%;
+        z-index: 10;
+    }
+
+    nav:hover {
+        margin: 0 4%;
+        padding: 1.25% 0.8%;
+        transition: ease 0.6s;
+    }
+
+    /* NavIcon */
+    nav a {
+        margin: 2% 0 2% 0;
+    }
+
+    nav a p {
+        margin: 0 0 1% 0;
+        font-size: 1.5rem;
+    }
+
+    .iconosNav {
+        font-size: 3.2rem;
+        margin-left: 2.5%;
+    }
+
+    /* Titulos */
+    .titulos {
+        font-size: 3.3rem;
+    }
+
+    /* Cajas Habilidades */
+    .frameBorde {
+        width: 85%;
+        margin: 8% 7.5%;
+        padding: 5% 0;
+    }
+
+    .frameBorde legend {
+        font-size: 2.5rem;
+    }
+
+    /* Iconos Habilidades */
+    .IconosHab {
+        margin: 2% 0.1%;
+        width: 45%;
+    }
+
+    .IconosHab p {
+        font-size: 1.5rem;
+    }
+
+    .IconosHab img {
+        padding: 6%;
+        width: 65%;
+    }
+
+    /* Caja Proyectos y relacionados*/
+    .cajaProyecto {
+        width: 90%;
+        margin: 5% 0;
+    }
+
+    .cajaProyecto p {
+        width: 80%;
+        margin: 0 14%;
+        margin-top: 5%;
+        padding: 3% 0;
+        font-size: 1.1rem;
+    }
+
+    .proyectoImg {
+        width: 100%;
+        padding: 2%;
+    }
+
+    .cajaProyecto:hover .cajaHerramientas {
+        margin-left: 7%;
+    }
+
+    .IconosHerr {
+        margin: 0% 0.1%;
+        width: 8%;
+        padding: 0.8% 2%;
+    }
+
+    /* Carousel */
+    .cajaPresentacion.sobremi {
+        width: 90%;
+        height: 100%;
+        font-size: 1.3rem;
+        padding: 10% 0;
+        margin: 0 4%;
+    }
+
+    .cajaPresentacion.sobremi h1 {
+        font-size: 2.5rem;
+        margin: 0 0 10% 0;
+    }
+
+    .carousel-img {
+        width: 100%;
+        text-align: center;
+        margin-top: 10%;
+        margin-right: 4%;
+        overflow: hidden;
+    }
+
+    .carouselDiv.activo {
+        width: 80%;
+    }
+
+    /* Contactame */
+    #cajaIconos {
+        width: 100%;
+    }
+
+    #cajaIconos a {
+        width: 80%;
+        padding-top: 8%;
+    }
+
+    /* Footer */
+    footer{
+        width: 100%;
+        margin-top: 5%;
+    }
+
+    footer h1 {
+        font-size: 1.5rem;
+    }
+
+    /* Modal */
+    .cuadroModal {
+        margin: 3% 3%;
+        width: 90%;
+        height: 90vh;
+    }
+
+    .cuadroModal .carousel {
+        width: 105%;
+        height: 80vh;
+        margin: 0%;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    section {
+        margin: 0;
+    }
+
+    #reproductor {
+        top: 15%;
+    }
+
+    #reproductor span {
+        height: 25%;
+        margin: 1.5% -0.5% 1.5% 0;
+        padding: 1% 2%;
+    }
+
+    #inicio {
+        flex-wrap: wrap;
+        width: 90%;
+        margin: 5% 5.5%;
+    }
+
+    #habilidades,
+    #proyectos,
+    #SobreMi,
+    #Contactame {
+        width: 100%;
+        margin: 0 0.2%;
+    }
+
+    #proyectos{
+        margin: 0;
+    }
+
+    #SobreMi {
+        margin: 0 2.1%;
+    }
+
+    #cajaSobreMi {
+        flex-wrap: wrap;
+    }
+
+    #Contactame {
+        margin: 0;
+    }
+
+    /* Presentacion */
+    .cajaPresentacion {
+        width: 95%;
+        margin: 2.5%;
+    }
+
+    .cajaPresentacion h1,
+    footer h1 {
+        font-size: 3.2rem;
+    }
+
+    .cajaPresentacion h3 {
+        font-size: 3rem;
+    }
+
+    .cajaPresentacion h2 {
+        font-size: 2rem;
+    }
+
+    #imgPresentacion {
+        width: 100%;
+    }
+
+    /* NavigatorBar */
+    nav {
+        top: 2%;
+        margin: 0 5%;
+        flex-direction: row;
+        justify-content: space-evenly;
+        width: 90%;
+        padding: 0%;
+        z-index: 10;
+    }
+
+    nav:hover {
+        margin: 0 4%;
+        padding: 1.25% 0.8%;
+        transition: ease 0.6s;
+    }
+
+    /* NavIcon */
+    nav a {
+        margin: 2% 0 1% 0;
+    }
+
+    nav a p {
+        margin: 0 0 1% 0;
+        font-size: 1.5rem;
+    }
+
+    .iconosNav {
+        font-size: 3.2rem;
+        margin-left: 2.5%;
+    }
+
+    /* Titulos */
+    .titulos {
+        font-size: 3.3rem;
+    }
+
+    /* Cajas Habilidades */
+    .frameBorde {
+        width: 85%;
+        margin: 8% 7.5%;
+        padding: 5% 0;
+    }
+
+    .frameBorde legend {
+        font-size: 2.5rem;
+    }
+
+    /* Iconos Habilidades */
+    .IconosHab {
+        margin: 2% 0.1%;
+        width: 45%;
+    }
+
+    .IconosHab p {
+        font-size: 1.5rem;
+    }
+
+    .IconosHab img {
+        padding: 6%;
+        width: 65%;
+    }
+
+    /* Caja Proyectos y relacionados*/
+    .cajaProyecto {
+        width: 45%;
+        margin: 5% 2.1%;
+    }
+
+    .cajaProyecto p {
+        width: 80%;
+        margin: 0 14%;
+        margin-top: 5%;
+        padding: 3% 0;
+        font-size: 1.1rem;
+    }
+
+    .proyectoImg {
+        width: 100%;
+        padding: 2%;
+    }
+
+    .cajaProyecto:hover .cajaHerramientas {
+        margin-left: 7%;
+    }
+
+    .IconosHerr {
+        margin: 0% 0.1%;
+        width: 8%;
+        padding: 0.8% 2%;
+    }
+
+    /* Carousel */
+    .cajaPresentacion.sobremi {
+        width: 91%;
+        height: 100%;
+        font-size: 1.3rem;
+        padding: 5% 0;
+    }
+
+    .cajaPresentacion.sobremi h1 {
+        font-size: 3.2rem;
+        margin: 0 0 5% 0;
+    }
+
+    .carousel-img {
+        width: 50%;
+        text-align: center;
+        margin-top: 5%;
+        margin-right: 15%;
+        margin-left: 26%;
+        overflow: hidden;
+    }
+
+    .carouselDiv.activo {
+        width: 80%;
+    }
+
+    /* Contactame */
+    #cajaIconos {
+        width: 100%;
+    }
+
+    #cajaIconos a {
+        width: 40%;
+        padding-top: 8%;
+        margin-top: 5%;
+    }
+
+    /* Footer */
+    footer h1 {
+        font-size: 1.5rem;
+    }
+
+    /* Modal */
+    .cuadroModal {
+        margin: 3% 3%;
+        width: 90%;
+        height: 90vh;
+    }
+
+    .cuadroModal .carousel {
+        width: 110%;
+        height: 80vh;
+        margin: 0%;
+    }
+
+}
+
+@media screen and (min-width: 700px) and (max-width: 768px) {
+    
+    #habilidades{
+        margin: 0 0.5%;
+    }
+
+    .cajaPresentacion.sobremi {
+        width: 90%;
+        height: 100%;
+        font-size: 1.3rem;
+        padding: 5% 0;
+    }
+    
+    .carousel-img {
+        width: 60%;
+        text-align: center;
+        margin-top: 10%;
+        margin-right: 15%;
+        margin-left: 22%;
+        overflow: hidden;
+    }
+
+    #cajaIconos a {
+        width: 40%;
+        padding-top: 8%;
+        margin-top: 4%;
+    }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1368px) {
+    section {
+        margin: 0;
+    }
+    
+    #reproductor span {
+        margin: 1% -0.5% 1% 0;
+    }
+    
+    #inicio{
+        margin: 0;
+        width: 90%;
+        margin-left: 10%;
+        flex-wrap: nowrap;
+    }
+
+    #habilidades,
+    #proyectos,
+    #SobreMi,
+    #Contactame {
+        margin: 0;
+        width: 88%;
+        margin-left: 10%;
+    }
+
+    #SobreMi{
+        margin-left: 11%;
+        width: 93%;
+    }
+    
+    #proyectos,
+    #Contactame {
+        position: relative;
+    }
+    
+    #cajaSobreMi {
+        display: flex;
+        flex-wrap: nowrap;
+        width: 100%;
+    }
+    
+    /* Presentacion */
+    .cajaPresentacion {
+        width: 60%;
+    }
+    
+    #imgPresentacion {
+        width: 40%;
+    }
+    
+    /* NavigatorBar */
+    nav {
+        top: 21%;
+        margin-left: 1.2%;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        width: 7%;
-        background-color: #111;
+        width: 6%;
         padding: 1.25% 0.6%;
-        box-shadow: 0px 0px 3px 5px #a52112;
-        border-radius: 40px;
-        transition: ease 0.3s;
-        z-index: 10;
     }
-
+    
+    nav:hover {
+        padding: 1.25% 1.5%;
+        transition: ease 0.6s;
+        margin-left: 1.3%;
+    }
+    
     /* NavIcon */
     nav a {
         margin: 10% 0;
@@ -1969,65 +1390,34 @@ footer h1 {
         transition: ease 0.5s;
         text-decoration: none;
     }
-
+    
     nav a p {
         margin: 0 0 1% 0;
         display: none;
         font-size: 1.3rem;
     }
-
-    /* Titulos */
-    .marcoTitulo {
-        background-color: #754d3b;
-        padding: 1% 5%;
-        transform: rotate(9deg);
-        transition: ease 0.3s;
-        border: 8px solid #4a2e21;
-        border-radius: 10px;
+    
+    nav a:hover p {
+        display: block;
     }
-
-    .marcoTitulo:hover {
-        transform: rotate(0deg);
-        transition: ease 0.6s;
+    
+    .iconosNav {
+        font-size: 3.8rem;
+        margin-left: 2.5%;
     }
-
-    .titulos {
-        margin: 0;
-        background: linear-gradient(#ffbf80, #ff8401, #a52112);
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        font-family: 'Enchanted Land', sans-serif;
-        font-size: 3.2rem;
-    }
-
+    
     /* Cajas Habilidades */
     .frameBorde {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-        text-align: center;
         width: 100%;
-        animation: shadow-blue-box-pres linear infinite 2s;
-        border: none;
         border-radius: 20px;
-        margin: 2% 0;
+        margin: 3% 0;
         padding: 3% 0;
     }
-
-    .frameBorde:hover {
-        background-color: #064e69;
-        transition: ease 0.5s;
-    }
-
+    
     .frameBorde legend {
-        background-color: #000;
-        padding: 1% 5%;
-        animation: shadow-blue-box-pres linear infinite 2s;
-        border-radius: 10px;
-        font-family: 'Genos', sans-serif;
         font-size: 2rem;
     }
-
+    
     /* Iconos Habilidades */
     .IconosHab {
         border-radius: 20px;
@@ -2035,77 +1425,34 @@ footer h1 {
         transition: ease 0.4s;
         width: 22%;
     }
-
-    .IconosHab:hover {
-        box-shadow: 0px 0px 18px 1px black;
-        transition: ease 0.2s;
-    }
-
-    .IconosHab.Bronce,
-    .IconosHerr.Bronce {
-        background: linear-gradient(90deg, #e38162, #753b28);
-    }
-
-    .IconosHab.Plata,
-    .IconosHerr.Plata {
-        background: linear-gradient(90deg, white, gray);
-    }
-
-    .IconosHab.Oro,
-    .IconosHerr.Oro {
-        background: linear-gradient(90deg, #f1e7a1, #b37f25);
-    }
-
+    
     .IconosHab img {
         padding: 6%;
         width: 60%;
     }
-
+    
     .IconosHab p {
-        font-family: 'Tektur', sans-serif;
         font-size: 1.4rem;
-        background: linear-gradient(#4eb4d9, #089dd4, #1a6a87);
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
     }
-
-    .IconosHab.Bronce p {
-        background: linear-gradient(white 50%, gray);
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-    }
-
+    
     /* Caja Proyectos y relacionados*/
     .cajaProyecto {
         width: 50%;
-        text-align: center;
-        font-family: 'Tektur', sans-serif;
         margin: 2% 0;
     }
-
+    
     .cajaProyecto p {
         margin: 0 25%;
         margin-top: 3%;
-        background: linear-gradient(90deg, #773e94, #3b2049);
-        border-radius: 50px;
         width: 50%;
-        padding: 3%;
-        font-size: 1.2rem;
+        padding: 2%;
     }
-
+    
     .proyectoImg {
         width: 90%;
-        background: url('./effects/glitch.gif');
-        padding: 1.5%;
-        border-top-right-radius: 30px;
-        border-bottom-left-radius: 30px;
+        padding: 2%;
     }
-
-    .contenedorImgP {
-        position: relative;
-        cursor: pointer;
-    }
-
+    
     .cajaHerramientas {
         display: none;
         position: absolute;
@@ -2113,187 +1460,70 @@ footer h1 {
         top: 87%;
         width: 95%;
     }
-
-    .cajaProyecto:hover .cajaHerramientas {
-        display: flex;
-        animation: normal linear aparecer-der 0.5s;
-    }
-
+    
     .IconosHerr {
         border-radius: 20px;
         margin: 0% 0.1%;
         width: 6%;
         padding: 0.8% 2%;
     }
-
+    
     /* Carousel */
     .cajaPresentacion.sobremi {
-        width: 60%;
-        height: 800px;
-        font-size: 1.2rem;
+        width: 67%;
+        height: 100%;
+        font-size: 1.3rem;
+        margin-right: 3%;
     }
-
-    .carousel {
-        display: flex;
-        align-items: center;
-        overflow: hidden;
-    }
-
+    
     .carousel-img {
-        width: 40%;
-        margin-left: 4%;
+        width: 50%;
+        margin: 0;
     }
-
-    .carousel span {
-        margin: 0 1%;
-        padding: 18% 1%;
-        cursor: pointer;
-        text-align: center;
-        font-family: 'Tektur', sans-serif;
-        font-size: 2rem;
-        z-index: 3;
-    }
-
-    .letraCarousel,
-    .carouselDiv {
-        position: absolute;
-        right: 0;
-        margin: 1% 2%;
-        transition: transform 1s ease;
-        opacity: 0;
-        white-space: pre-line;
-    }
-
-    .letraCarousel.der,
-    .carouselDiv.der {
-        transform: translate(30%);
-    }
-
-    .letraCarousel.izq,
-    .carouselDiv.izq {
-        transform: translate(-30%);
-    }
-
-    .letraCarousel.activo,
-    .carousel div.activo {
-        position: relative;
-        transform: translate(0%);
-        opacity: 1;
-    }
-
-    .carousel div {
-        width: 10%;
-    }
-
-    .carousel div.activo {
+    
+    .letraCarousel.activo {
         width: 100%;
     }
-
-    .carousel div img {
+    
+    .carouselDiv.activo {
+        width: 70%;
+    }
+    
+    .carouselDiv img {
         width: 100%;
         border-radius: 20px;
     }
-
-    .textoExtraC {
-        text-align: center;
-        font-family: 'Tektur', sans-serif;
-    }
-
+    
     /* Contactame */
     #cajaIconos {
-        width: 90%;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-        font-family: 'Enchanted Land', sans-serif;
+        width: 100%;
     }
-
+    
     #cajaIconos a {
-        text-align: center;
-        text-decoration: none;
         width: 30%;
-        padding-top: 3.5%;
-        border-top-left-radius: 100px;
-        border-bottom-right-radius: 100px;
-        color: white;
-        margin: 1.2% 0;
-    }
-
-    #cajaIconos a:nth-child(1) {
-        transition: ease 0.2s;
-        border: 2px solid white;
-        background: linear-gradient(150deg, #b3392b, #000);
-    }
-
-    #cajaIconos a:nth-child(1):hover {
-        box-shadow: 0px 0px 8px 6px #a52112;
-    }
-
-    #cajaIconos a:nth-child(2) {
-        transition: ease 0.2s;
-        border: 2px solid white;
-        background: linear-gradient(150deg, #28a9d8, #000);
-    }
-
-    #cajaIconos a:nth-child(2):hover {
-        box-shadow: 0px 0px 8px 6px #089dd4;
-    }
-
-    #cajaIconos a:nth-child(3) {
-        transition: ease 0.2s;
-        border: 2px solid white;
-        background: linear-gradient(150deg, #a66bc4, #000);
-    }
-
-    #cajaIconos a:nth-child(3):hover {
-        box-shadow: 0px 0px 8px 6px #773e94;
-    }
-
-    #cajaIconos a:nth-child(4) {
-        transition: ease 0.2s;
-        border: 2px solid white;
-        background: linear-gradient(150deg, #e6953f, #000);
-    }
-
-    #cajaIconos a:nth-child(4):hover {
-        box-shadow: 0px 0px 8px 6px #ff8401;
-    }
-
-    #cajaIconos a:nth-child(5) {
-        transition: ease 0.2s;
-        border: 2px solid white;
-        background: linear-gradient(150deg, #12b112, #000);
-    }
-
-    #cajaIconos a:nth-child(5):hover {
-        box-shadow: 0px 0px 8px 6px #068606;
+        padding-top: 4%;
+        margin: 2% 0;
     }
 
     #cajaIconos a i {
         font-size: 7rem;
     }
-
+    
     #cajaIconos a p {
         font-size: 2rem;
     }
-
+    
     /* Footer */
-    footer {
-        text-align: center;
-        font-family: 'Tekur', sans-serif;
-    }
-
     footer h1 {
         font-size: 2rem;
-        animation: footer-anim linear infinite 3s;
     }
-
+    
     /* Modal */
     .modal {
         display: none;
     }
-
-    /* .modal.mostrar {
+    
+    .modal.mostrar {
         z-index: 101;
         display: block;
         position: absolute;
@@ -2301,1941 +1531,156 @@ footer h1 {
         height: 100vh;
         background: linear-gradient(#773e94, black);
     }
-
+    
     .cuadroModal {
         display: flex;
         flex-direction: column;
-        margin: 3% 3%;
-        width: 90%;
+        margin: 3% 10%;
+        width: 80%;
         height: 80vh;
         font-family: 'Tektur', sans-serif;
         border: 2px solid white;
         border-radius: 20px;
         padding: 1.5%;
-    } */
-
-    .cuadroModal .carousel {
-        width: 60%;
-        margin: 2% 20%;
     }
-
+    
+    .cuadroModal .carousel {
+        width: 100%;
+        margin: 0% 10%;
+    }
+    
     .cuadroModal .carousel video,
     .cuadroModal .carousel img {
         width: 100%;
         border-radius: 20px;
         border: 2px solid white;
     }
-
+    
     .cuadroModal .carousel p {
         user-select: text;
         color: white;
+        font-size: 1.2rem;
     }
-
+    
     .cuadroModal span {
         cursor: pointer;
         font-size: 1.3rem;
         margin-left: 1%;
     }
+}
 
-    /* Animaciones */
-    @keyframes fade {
-
-        0%,
-        100% {
-            opacity: 1;
-        }
-
-        50% {
-            opacity: 0.2;
-        }
+@media screen and (width: 1024px)  {
+    
+    #habilidades{
+        margin-left: 11%;
+    }
+    
+    nav{
+        width: 8%;
     }
 
-    @keyframes shadow-box-pres {
+    #cajaIconos a {
+        width: 30%;
+        padding-top: 4%;
+        margin: 2% 0;
+    }
+}
 
-        0%,
-        100% {
-            box-shadow: 0px 0px 10px 18px #ff8401;
-        }
-
-        50% {
-            box-shadow: 0px 0px 3px 5px #a52112;
-        }
+@media screen and (min-width: 1214px) and (max-width: 1368px) {
+    .cuadroModal .carousel {
+        width: 100%;
+        margin: 0 10%;
     }
 
-    @keyframes shadow-blue-box-pres {
-
-        0%,
-        100% {
-            box-shadow: 0px 0px 10px 18px #089dd4;
-        }
-
-        50% {
-            box-shadow: 0px 0px 3px 5px #1a6a87;
-        }
-    }
-
-    @keyframes dragonImg {
-
-        0%,
-        100% {
-            transform: translateY(-3%);
-        }
-
-        50% {
-            transform: translateY(3%);
-        }
-    }
-
-    @keyframes aparecer-der {
-        0% {
-            left: 20%;
-            opacity: 0;
-        }
-
-        100% {
-            left: 0%;
-            opacity: 1;
-        }
-    }
-
-    @keyframes footer-anim {
-        0% {
-            box-shadow: 0 0 10px 4px #a52112;
-        }
-
-        25% {
-            box-shadow: 0 0 10px 4px #064e69;
-        }
-
-        50% {
-            box-shadow: 0 0 10px 4px #773e94;
-        }
-
-        75% {
-            box-shadow: 0 0 10px 4px #ff8401;
-        }
-
-        100% {
-            box-shadow: 0px 0px 8px 6px #068606;
-        }
+    .cuadroModal .carousel .carouselDiv img{
+        width: 80%;
+        margin: 0 10%;
     }
 }
 
 @media screen and (min-width: 1368px) and (max-width: 1440px) {
-
-    /* Contenedores */
-    section {
-        display: flex;
-        margin: 0 2% 0 15%;
-        align-items: center;
-        justify-content: space-between;
-        width: 100%;
-    }
-
-    #reproductor {
-        position: fixed;
-        width: 100%;
-        top: 3%;
-        display: flex;
-        z-index: 1;
-        justify-content: end;
-    }
-
-    #reproductor iframe {
-        transition: ease 1s;
-        width: 50%;
-    }
-
-    #reproductor span {
-        font-size: 2rem;
-        background-color: rgb(40, 40, 40);
-        height: 25%;
-        margin: 0.5% -0.5% 0.5% 0;
-        border-bottom-left-radius: 20px;
-        border-top-left-radius: 20px;
-        padding: 1% 1.2%;
-        border: 1px solid white;
-        cursor: pointer;
-    }
-
     #inicio{
-        flex-wrap: nowrap;
-        margin-top: 7%;
+        margin-top: 5%;
     }
 
-    #habilidades,
-    #proyectos,
-    #SobreMi,
-    #Contactame {
-        flex-direction: column;
-        justify-content: center;
+    nav{
+        top: 25%;
     }
-
-    #proyectos,
-    #Contactame {
-        position: relative;
-    }
-
-    .cajas {
-        display: flex;
-        flex-wrap: wrap;
-        width: 100%;
-    }
-
-    #proyectos .cajas {
-        flex-direction: row;
-    }
-
-    #cajaSobreMi {
-        display: flex;
-        flex-wrap: nowrap;
-        width: 100%;
-    }
-
-    /* Presentacion */
-    .cajaPresentacion {
-        text-align: center;
-        font-family: 'Tektur', sans-serif;
-        animation: shadow-box-pres backwards infinite 1.5s;
-        border-radius: 10px;
-        padding: 1% 4%;
-        background-color: #111;
-    }
-
-    .cajaPresentacion h1,
-    footer h1 {
-        background: linear-gradient(#ffbf80, #ff8401, #a52112);
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        font-size: 3.2rem;
-        animation: fade linear infinite 5s;
-    }
-
-    .cajaPresentacion h3 {
-        font-family: 'Enchanted Land', sans-serif;
-        font-size: 3.2rem;
-        margin-bottom: -1%;
-    }
-
-    .cajaPresentacion h2 {
-        font-size: 2rem;
-    }
-
-    #imgPresentacion {
-        width: 40%;
-        animation: dragonImg linear infinite 1.5s;
-    }
-
-    /* NavigatorBar */
-    nav {
-        font-family: 'Genos', sans-serif;
-        position: fixed;
-        top: 20%;
-        margin-left: 1%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 6%;
-        background-color: #111;
-        padding: 1.25% 0.6%;
-        box-shadow: 0px 0px 3px 5px #a52112;
-        border-radius: 40px;
-        transition: ease 0.3s;
-        z-index: 10;
-    }
-
-    /* NavIcon */
-    nav a {
-        margin: 10% 0;
-        color: white;
-        text-align: center;
-        transition: ease 0.5s;
-        text-decoration: none;
-    }
-
-    nav a p {
-        margin: 0 0 1% 0;
-        display: none;
-        font-size: 1.3rem;
-    }
-
-    /* Titulos */
-    .marcoTitulo {
-        background-color: #754d3b;
-        padding: 1% 5%;
-        transform: rotate(9deg);
-        transition: ease 0.3s;
-        border: 8px solid #4a2e21;
-        border-radius: 10px;
-    }
-
-    .marcoTitulo:hover {
-        transform: rotate(0deg);
-        transition: ease 0.6s;
-    }
-
-    .titulos {
-        margin: 0;
-        background: linear-gradient(#ffbf80, #ff8401, #a52112);
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        font-family: 'Enchanted Land', sans-serif;
-        font-size: 3.2rem;
-    }
-
-    /* Cajas Habilidades */
-    .frameBorde {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-        text-align: center;
-        width: 100%;
-        animation: shadow-blue-box-pres linear infinite 2s;
-        border: none;
-        border-radius: 20px;
-        margin: 2% 0;
-        padding: 3% 0;
-    }
-
-    .frameBorde:hover {
-        background-color: #064e69;
-        transition: ease 0.5s;
-    }
-
-    .frameBorde legend {
-        background-color: #000;
-        padding: 1% 5%;
-        animation: shadow-blue-box-pres linear infinite 2s;
-        border-radius: 10px;
-        font-family: 'Genos', sans-serif;
-        font-size: 2rem;
-    }
-
-    /* Iconos Habilidades */
-    .IconosHab {
-        border-radius: 20px;
-        margin: 1% 0.1%;
-        transition: ease 0.4s;
-        width: 22%;
-    }
-
-    .IconosHab:hover {
-        box-shadow: 0px 0px 18px 1px black;
-        transition: ease 0.2s;
-    }
-
-    .IconosHab.Bronce,
-    .IconosHerr.Bronce {
-        background: linear-gradient(90deg, #e38162, #753b28);
-    }
-
-    .IconosHab.Plata,
-    .IconosHerr.Plata {
-        background: linear-gradient(90deg, white, gray);
-    }
-
-    .IconosHab.Oro,
-    .IconosHerr.Oro {
-        background: linear-gradient(90deg, #f1e7a1, #b37f25);
-    }
-
-    .IconosHab img {
-        padding: 6%;
-        width: 60%;
-    }
-
-    .IconosHab p {
-        font-family: 'Tektur', sans-serif;
-        font-size: 1.4rem;
-        background: linear-gradient(#4eb4d9, #089dd4, #1a6a87);
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-    }
-
-    .IconosHab.Bronce p {
-        background: linear-gradient(white 50%, gray);
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-    }
-
-    /* Caja Proyectos y relacionados*/
-    .cajaProyecto {
-        width: 50%;
-        text-align: center;
-        font-family: 'Tektur', sans-serif;
-        margin: 2% 0;
-    }
-
-    .cajaProyecto p {
-        margin: 0 25%;
-        margin-top: 3%;
-        background: linear-gradient(90deg, #773e94, #3b2049);
-        border-radius: 50px;
-        width: 50%;
-        padding: 3%;
-        font-size: 1.2rem;
-    }
-
-    .proyectoImg {
-        width: 90%;
-        background: url('./effects/glitch.gif');
-        padding: 1.5%;
-        border-top-right-radius: 30px;
-        border-bottom-left-radius: 30px;
-    }
-
-    .contenedorImgP {
-        position: relative;
-        cursor: pointer;
-    }
-
-    .cajaHerramientas {
-        display: none;
-        position: absolute;
-        justify-content: end;
-        top: 87%;
-        width: 95%;
-    }
-
-    .cajaProyecto:hover .cajaHerramientas {
-        display: flex;
-        animation: normal linear aparecer-der 0.5s;
-    }
-
-    .IconosHerr {
-        border-radius: 20px;
-        margin: 0% 0.1%;
-        width: 6%;
-        padding: 0.8% 2%;
-    }
-
-    /* Carousel */
-    .cajaPresentacion.sobremi {
-        width: 60%;
-        height: 700px;
-        font-size: 1.3rem;
-    }
-
-    .carousel {
-        display: flex;
-        align-items: center;
-        overflow: hidden;
-    }
-
-    .carousel-img {
-        width: 40%;
-        margin-left: 4%;
-    }
-
-    .carousel span {
-        margin: 0 1%;
-        padding: 18% 1%;
-        cursor: pointer;
-        text-align: center;
-        font-family: 'Tektur', sans-serif;
-        font-size: 2rem;
-        z-index: 3;
-    }
-
-    .letraCarousel,
-    .carouselDiv {
-        position: absolute;
-        right: 0;
-        margin: 1% 2%;
-        transition: transform 1s ease;
-        opacity: 0;
-        white-space: pre-line;
-    }
-
-    .letraCarousel.der,
-    .carouselDiv.der {
-        transform: translate(30%);
-    }
-
-    .letraCarousel.izq,
-    .carouselDiv.izq {
-        transform: translate(-30%);
-    }
-
-    .letraCarousel.activo,
-    .carousel div.activo {
-        position: relative;
-        transform: translate(0%);
-        opacity: 1;
-    }
-
-    .carousel div {
-        width: 10%;
-    }
-
-    .carousel div.activo {
-        width: 100%;
-    }
-
-    .carousel div img {
-        width: 100%;
-        border-radius: 20px;
-    }
-
-    .textoExtraC {
-        text-align: center;
-        font-family: 'Tektur', sans-serif;
-    }
-
-    /* Contactame */
-    #cajaIconos {
-        width: 90%;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-        font-family: 'Enchanted Land', sans-serif;
-    }
-
-    #cajaIconos a {
-        text-align: center;
-        text-decoration: none;
-        width: 30%;
-        padding-top: 3.5%;
-        border-top-left-radius: 100px;
-        border-bottom-right-radius: 100px;
-        color: white;
-        margin: 1.2% 0;
-    }
-
-    #cajaIconos a:nth-child(1) {
-        transition: ease 0.2s;
-        border: 2px solid white;
-        background: linear-gradient(150deg, #b3392b, #000);
-    }
-
-    #cajaIconos a:nth-child(1):hover {
-        box-shadow: 0px 0px 8px 6px #a52112;
-    }
-
-    #cajaIconos a:nth-child(2) {
-        transition: ease 0.2s;
-        border: 2px solid white;
-        background: linear-gradient(150deg, #28a9d8, #000);
-    }
-
-    #cajaIconos a:nth-child(2):hover {
-        box-shadow: 0px 0px 8px 6px #089dd4;
-    }
-
-    #cajaIconos a:nth-child(3) {
-        transition: ease 0.2s;
-        border: 2px solid white;
-        background: linear-gradient(150deg, #a66bc4, #000);
-    }
-
-    #cajaIconos a:nth-child(3):hover {
-        box-shadow: 0px 0px 8px 6px #773e94;
-    }
-
-    #cajaIconos a:nth-child(4) {
-        transition: ease 0.2s;
-        border: 2px solid white;
-        background: linear-gradient(150deg, #e6953f, #000);
-    }
-
-    #cajaIconos a:nth-child(4):hover {
-        box-shadow: 0px 0px 8px 6px #ff8401;
-    }
-
-    #cajaIconos a:nth-child(5) {
-        transition: ease 0.2s;
-        border: 2px solid white;
-        background: linear-gradient(150deg, #12b112, #000);
-    }
-
-    #cajaIconos a:nth-child(5):hover {
-        box-shadow: 0px 0px 8px 6px #068606;
-    }
-
-    #cajaIconos a i {
-        font-size: 7rem;
-    }
-
-    #cajaIconos a p {
-        font-size: 2rem;
-    }
-
-    /* Footer */
-    footer {
-        width: 120%;
-        text-align: center;
-        font-family: 'Tekur', sans-serif;
-    }
-
-    footer h1 {
-        font-size: 2rem;
-        animation: footer-anim linear infinite 3s;
-    }
-
-    /* Modal */
-    .modal {
-        display: none;
-    }
-
-    /* .modal.mostrar {
-        z-index: 101;
-        display: block;
-        position: absolute;
-        width: 120%;
-        height: 120vh;
-        background: linear-gradient(#773e94, black);
-    }
-
-    .cuadroModal {
-        display: flex;
-        flex-direction: column;
-        margin: 3% 3%;
-        width: 90%;
-        height: 100vh;
-        font-family: 'Tektur', sans-serif;
-        border: 2px solid white;
-        border-radius: 20px;
-        padding: 1.5%;
-    } */
 
     .cuadroModal .carousel {
-        width: 80%;
-        margin: 1% 11%;
-    }
-
-    .cuadroModal .carousel video,
-    .cuadroModal .carousel img {
         width: 100%;
-        border-radius: 20px;
-        border: 2px solid white;
-    }
-
-    .cuadroModal .carousel p {
-        user-select: text;
-        color: white;
-    }
-
-    .cuadroModal span {
-        cursor: pointer;
-        font-size: 1.3rem;
-        margin-left: 1%;
-    }
-
-    /* Animaciones */
-    @keyframes fade {
-
-        0%,
-        100% {
-            opacity: 1;
-        }
-
-        50% {
-            opacity: 0.2;
-        }
-    }
-
-    @keyframes shadow-box-pres {
-
-        0%,
-        100% {
-            box-shadow: 0px 0px 10px 18px #ff8401;
-        }
-
-        50% {
-            box-shadow: 0px 0px 3px 5px #a52112;
-        }
-    }
-
-    @keyframes shadow-blue-box-pres {
-
-        0%,
-        100% {
-            box-shadow: 0px 0px 10px 18px #089dd4;
-        }
-
-        50% {
-            box-shadow: 0px 0px 3px 5px #1a6a87;
-        }
-    }
-
-    @keyframes dragonImg {
-
-        0%,
-        100% {
-            transform: translateY(-3%);
-        }
-
-        50% {
-            transform: translateY(3%);
-        }
-    }
-
-    @keyframes aparecer-der {
-        0% {
-            left: 20%;
-            opacity: 0;
-        }
-
-        100% {
-            left: 0%;
-            opacity: 1;
-        }
-    }
-
-    @keyframes footer-anim {
-        0% {
-            box-shadow: 0 0 10px 4px #a52112;
-        }
-
-        25% {
-            box-shadow: 0 0 10px 4px #064e69;
-        }
-
-        50% {
-            box-shadow: 0 0 10px 4px #773e94;
-        }
-
-        75% {
-            box-shadow: 0 0 10px 4px #ff8401;
-        }
-
-        100% {
-            box-shadow: 0px 0px 8px 6px #068606;
-        }
-    }
-}
-
-@media screen and (min-width: 1920px) and (max-width: 2560px){
-    /* Contenedores */
-section {
-    display: flex;
-    margin: 0 2% 0 9%;
-    align-items: center;
-    justify-content: space-between;
-}
-
-#reproductor {
-    position: fixed;
-    width: 100%;
-    display: flex;
-    z-index: 1;
-    justify-content: end;
-}
-
-#reproductor iframe {
-    transition: ease 1s;
-    width: 50%;
-    height: 160px;
-}
-
-#reproductor span {
-    font-size: 2rem;
-    background-color: rgb(40, 40, 40);
-    height: 25%;
-    margin: 0.5% -0.5% 0.5% 0;
-    border-bottom-left-radius: 20px;
-    border-top-left-radius: 20px;
-    padding: 1% 1.2%;
-    border: 1px solid white;
-    cursor: pointer;
-}
-
-#inicio{
-    margin-bottom: 14%;
-}
-
-#habilidades,
-#proyectos,
-#SobreMi,
-#Contactame {
-    flex-direction: column;
-    justify-content: center;
-    margin-bottom: 14%;
-}
-
-#Contactame{
-    margin-bottom: 7%;
-}
-
-#proyectos,
-#Contactame {
-    position: relative;
-}
-
-.cajas {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-}
-
-#proyectos .cajas {
-    flex-direction: row;
-}
-
-#cajaSobreMi {
-    display: flex;
-    width: 100%;
-}
-
-/* Presentacion */
-.cajaPresentacion {
-    text-align: center;
-    font-family: 'Tektur', sans-serif;
-    animation: shadow-box-pres backwards infinite 1.5s;
-    border-radius: 10px;
-    padding: 1% 4%;
-    background-color: #111;
-}
-
-.cajaPresentacion h1,
-footer h1 {
-    background: linear-gradient(#ffbf80, #ff8401, #a52112);
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    font-size: 3.2rem;
-    animation: fade linear infinite 5s;
-}
-
-.cajaPresentacion h3 {
-    font-family: 'Enchanted Land', sans-serif;
-    font-size: 3.2rem;
-    margin-bottom: -1%;
-}
-
-.cajaPresentacion h2 {
-    font-size: 2rem;
-}
-
-#imgPresentacion {
-    width: 45%;
-    animation: dragonImg linear infinite 1.5s;
-}
-
-/* NavigatorBar */
-nav {
-    font-family: 'Genos', sans-serif;
-    position: fixed;
-    top: 23%;
-    margin-left: 1%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 5%;
-    background-color: #111;
-    padding: 1.25% 0.6%;
-    box-shadow: 0px 0px 3px 5px #a52112;
-    border-radius: 40px;
-    transition: ease 0.3s;
-    z-index: 10;
-}
-
-nav.Azul {
-    box-shadow: 0px 0px 3px 5px #089dd4;
-}
-
-nav.Purpura {
-    box-shadow: 0px 0px 3px 5px #773e94;
-}
-
-nav.Naranja {
-    box-shadow: 0px 0px 3px 5px #ff8401;
-}
-
-nav:hover {
-    padding: 1.25% 1.5%;
-    transition: ease 0.6s;
-}
-
-/* NavIcon */
-nav a {
-    margin: 10% 0;
-    color: white;
-    text-align: center;
-    transition: ease 0.5s;
-    text-decoration: none;
-}
-
-nav.Azul a:hover {
-    color: #089dd4;
-    transition: ease 0.2s;
-}
-
-nav.Purpura a:hover {
-    color: #773e94;
-    transition: ease 0.2s;
-}
-
-nav.Naranja a:hover {
-    color: #ff8401;
-    transition: ease 0.2s;
-}
-
-nav a:hover {
-    color: #a52112;
-    transition: ease 0.2s;
-}
-
-nav a p {
-    margin: 0 0 1% 0;
-    display: none;
-    font-size: 1.3rem;
-}
-
-nav a:hover p {
-    display: block;
-}
-
-.iconosNav {
-    font-size: 3.8rem;
-    margin-left: 2.5%;
-}
-
-/* Titulos */
-.marcoTitulo {
-    background-color: #754d3b;
-    padding: 1% 5%;
-    transform: rotate(9deg);
-    transition: ease 0.3s;
-    border: 8px solid #4a2e21;
-    border-radius: 10px;
-}
-
-.marcoTitulo:hover {
-    transform: rotate(0deg);
-    transition: ease 0.6s;
-}
-
-.titulos {
-    margin: 0;
-    background: linear-gradient(#ffbf80, #ff8401, #a52112);
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    font-family: 'Enchanted Land', sans-serif;
-    font-size: 3.2rem;
-}
-
-/* Cajas Habilidades */
-.frameBorde {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    text-align: center;
-    width: 100%;
-    animation: shadow-blue-box-pres linear infinite 2s;
-    border: none;
-    border-radius: 20px;
-    margin: 2% 0;
-    padding: 3% 0;
-}
-
-.frameBorde:hover {
-    background-color: #064e69;
-    transition: ease 0.5s;
-}
-
-.frameBorde legend {
-    background-color: #000;
-    padding: 1% 5%;
-    animation: shadow-blue-box-pres linear infinite 2s;
-    border-radius: 10px;
-    font-family: 'Genos', sans-serif;
-    font-size: 2rem;
-}
-
-/* Iconos Habilidades */
-.IconosHab {
-    border-radius: 20px;
-    margin: 1% 0.1%;
-    transition: ease 0.4s;
-    width: 22%;
-}
-
-.IconosHab:hover {
-    box-shadow: 0px 0px 18px 1px black;
-    transition: ease 0.2s;
-}
-
-.IconosHab.Bronce,
-.IconosHerr.Bronce {
-    background: linear-gradient(90deg, #e38162, #753b28);
-}
-
-.IconosHab.Plata,
-.IconosHerr.Plata {
-    background: linear-gradient(90deg, white, gray);
-}
-
-.IconosHab.Oro,
-.IconosHerr.Oro {
-    background: linear-gradient(90deg, #f1e7a1, #b37f25);
-}
-
-.IconosHab img {
-    padding: 6%;
-    width: 60%;
-}
-
-.IconosHab p {
-    font-family: 'Tektur', sans-serif;
-    font-size: 1.4rem;
-    background: linear-gradient(#4eb4d9, #089dd4, #1a6a87);
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-}
-
-.IconosHab.Bronce p {
-    background: linear-gradient(white 50%, gray);
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-}
-
-/* Caja Proyectos y relacionados*/
-.cajaProyecto {
-    width: 50%;
-    text-align: center;
-    font-family: 'Tektur', sans-serif;
-    margin: 2% 0;
-}
-
-.cajaProyecto p {
-    margin: 0 25%;
-    margin-top: 3%;
-    background: linear-gradient(90deg, #773e94, #3b2049);
-    border-radius: 50px;
-    width: 50%;
-    padding: 1%;
-}
-
-.proyectoImg {
-    width: 90%;
-    background: url('./effects/glitch.gif');
-    padding: 1.5%;
-    border-top-right-radius: 30px;
-    border-bottom-left-radius: 30px;
-}
-
-.contenedorImgP {
-    position: relative;
-    cursor: pointer;
-}
-
-.cajaHerramientas {
-    display: none;
-    position: absolute;
-    justify-content: end;
-    top: 87%;
-    width: 95%;
-}
-
-.cajaProyecto:hover .cajaHerramientas {
-    display: flex;
-    animation: normal linear aparecer-der 0.5s;
-}
-
-.IconosHerr {
-    border-radius: 20px;
-    margin: 0% 0.1%;
-    width: 6%;
-    padding: 0.8% 2%;
-}
-
-/* Carousel */
-.cajaPresentacion.sobremi {
-    width: 60%;
-    height: 600px;
-    font-size: 1.3rem;
-}
-
-.carousel {
-    display: flex;
-    align-items: center;
-    overflow: hidden;
-}
-
-.carousel-img {
-    width: 40%;
-    margin-left: 4%;
-}
-
-.carousel span {
-    margin: 0 1%;
-    padding: 18% 1%;
-    cursor: pointer;
-    text-align: center;
-    font-family: 'Tektur', sans-serif;
-    font-size: 2rem;
-    z-index: 3;
-}
-
-.letraCarousel,
-.carouselDiv {
-    position: absolute;
-    right: 0;
-    margin: 1% 2%;
-    transition: transform 1s ease;
-    opacity: 0;
-    white-space: pre-line;
-}
-
-.letraCarousel.der,
-.carouselDiv.der {
-    transform: translate(30%);
-}
-
-.letraCarousel.izq,
-.carouselDiv.izq {
-    transform: translate(-30%);
-}
-
-.letraCarousel.activo,
-.carousel div.activo {
-    position: relative;
-    transform: translate(0%);
-    opacity: 1;
-}
-
-.carousel div {
-    width: 10%;
-}
-
-.carousel div.activo {
-    width: 70%;
-}
-
-.carousel div img {
-    width: 100%;
-    border-radius: 20px;
-}
-
-.textoExtraC {
-    text-align: center;
-    font-family: 'Tektur', sans-serif;
-}
-
-/* Contactame */
-#cajaIconos {
-    width: 90%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    font-family: 'Enchanted Land', sans-serif;
-}
-
-#cajaIconos a {
-    text-align: center;
-    text-decoration: none;
-    width: 25%;
-    padding-top: 3.5%;
-    border-top-left-radius: 100px;
-    border-bottom-right-radius: 100px;
-    color: white;
-    margin: 1.2% 0;
-}
-
-#cajaIconos a:nth-child(1) {
-    transition: ease 0.2s;
-    border: 2px solid white;
-    background: linear-gradient(150deg, #b3392b, #000);
-}
-
-#cajaIconos a:nth-child(1):hover {
-    box-shadow: 0px 0px 8px 6px #a52112;
-}
-
-#cajaIconos a:nth-child(2) {
-    transition: ease 0.2s;
-    border: 2px solid white;
-    background: linear-gradient(150deg, #28a9d8, #000);
-}
-
-#cajaIconos a:nth-child(2):hover {
-    box-shadow: 0px 0px 8px 6px #089dd4;
-}
-
-#cajaIconos a:nth-child(3) {
-    transition: ease 0.2s;
-    border: 2px solid white;
-    background: linear-gradient(150deg, #a66bc4, #000);
-}
-
-#cajaIconos a:nth-child(3):hover {
-    box-shadow: 0px 0px 8px 6px #773e94;
-}
-
-#cajaIconos a:nth-child(4) {
-    transition: ease 0.2s;
-    border: 2px solid white;
-    background: linear-gradient(150deg, #e6953f, #000);
-}
-
-#cajaIconos a:nth-child(4):hover {
-    box-shadow: 0px 0px 8px 6px #ff8401;
-}
-
-#cajaIconos a:nth-child(5) {
-    transition: ease 0.2s;
-    border: 2px solid white;
-    background: linear-gradient(150deg, #12b112, #000);
-}
-
-#cajaIconos a:nth-child(5):hover {
-    box-shadow: 0px 0px 8px 6px #068606;
-}
-
-#cajaIconos a i {
-    font-size: 7rem;
-}
-
-#cajaIconos a p {
-    font-size: 2rem;
-}
-
-/* Footer */
-footer {
-    text-align: center;
-    font-family: 'Tekur', sans-serif;
-}
-
-footer h1 {
-    font-size: 2rem;
-    animation: footer-anim linear infinite 3s;
-}
-
-/* Modal */
-.modal {
-    display: none;
-}
-
-.modal.mostrar {
-    z-index: 4;
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 100vh;
-    background: linear-gradient(#773e94, black);
-}
-
-.cuadroModal {
-    display: flex;
-    flex-direction: column;
-    margin: 3% 15%;
-    width: 70%;
-    height: 80vh;
-    font-family: 'Tektur', sans-serif;
-    border: 2px solid white;
-    border-radius: 20px;
-    padding: 1.5%;
-}
-
-.cuadroModal .carousel {
-    width: 100%;
-    margin: 0 8%;
-}
-
-.cuadroModal .carousel video,
-.cuadroModal .carousel img {
-    width: 100%;
-    border-radius: 20px;
-    border: 2px solid white;
-}
-
-.cuadroModal .carousel p {
-    user-select: text;
-    color: white;
-}
-
-.cuadroModal span {
-    cursor: pointer;
-    font-size: 1.3rem;
-    margin-left: 1%;
-}
-
-/* Animaciones */
-@keyframes fade {
-
-    0%,
-    100% {
-        opacity: 1;
-    }
-
-    50% {
-        opacity: 0.2;
-    }
-}
-
-@keyframes shadow-box-pres {
-
-    0%,
-    100% {
-        box-shadow: 0px 0px 10px 18px #ff8401;
-    }
-
-    50% {
-        box-shadow: 0px 0px 3px 5px #a52112;
-    }
-}
-
-@keyframes shadow-blue-box-pres {
-
-    0%,
-    100% {
-        box-shadow: 0px 0px 10px 18px #089dd4;
-    }
-
-    50% {
-        box-shadow: 0px 0px 3px 5px #1a6a87;
-    }
-}
-
-@keyframes dragonImg {
-
-    0%,
-    100% {
-        transform: translateY(-3%);
-    }
-
-    50% {
-        transform: translateY(3%);
-    }
-}
-
-@keyframes aparecer-der {
-    0% {
-        left: 20%;
-        opacity: 0;
-    }
-
-    100% {
-        left: 0%;
-        opacity: 1;
-    }
-}
-
-@keyframes footer-anim {
-    0% {
-        box-shadow: 0 0 10px 4px #a52112;
-    }
-
-    25% {
-        box-shadow: 0 0 10px 4px #064e69;
-    }
-
-    50% {
-        box-shadow: 0 0 10px 4px #773e94;
-    }
-
-    75% {
-        box-shadow: 0 0 10px 4px #ff8401;
-    }
-
-    100% {
-        box-shadow: 0px 0px 8px 6px #068606;
-    }
-}
-}
-
-@media screen and (min-width: 2560px){
+        margin: 4% 10%;
         
-    /* Contenedores */
-    section {
-        display: flex;
-        margin: 0 2% 0 13%;
-        align-items: center;
-        justify-content: space-between;
-        width: 100%;
     }
 
-    #reproductor {
-        position: fixed;
-        width: 100%;
-        top: 3%;
-        display: flex;
-        z-index: 1;
-        justify-content: end;
+    .textoExtraC{
+        font-size: 1.2rem;
     }
+}
 
-    #reproductor iframe {
-        transition: ease 1s;
-        width: 50%;
-        height: 180px;
-    }
-
+@media screen and (min-width: 1440px) and (max-width: 1920px){
     #reproductor span {
-        font-size: 2rem;
-        background-color: rgb(40, 40, 40);
-        height: 25%;
         margin: 0.5% -0.5% 0.5% 0;
-        border-bottom-left-radius: 20px;
-        border-top-left-radius: 20px;
-        padding: 1% 1.2%;
-        border: 1px solid white;
-        cursor: pointer;
+        padding: 0.5% 1.5%;
     }
-
-    #inicio{
-        flex-wrap: nowrap;
-        margin-top: 3%;
-        margin-bottom: 20%;
-    }
-
-    #habilidades,
-    #proyectos,
-    #SobreMi,
-    #Contactame {
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    #proyectos,
-    #Contactame {
-        position: relative;
-    }
-
-    #proyectos{
-        margin-bottom: 14%;
-    }
-
-    .cajas {
-        display: flex;
-        flex-wrap: wrap;
+    
+    .cuadroModal .carousel {
         width: 100%;
+        margin: 10% 10%;
+        
     }
 
-    #proyectos .cajas {
-        flex-direction: row;
+    .textoExtraC{
+        font-size: 1.3rem;
     }
+}
 
-    #cajaSobreMi {
-        display: flex;
-        flex-wrap: nowrap;
+@media screen and (min-width: 1750px){
+    .cuadroModal .carousel {
         width: 100%;
+        margin: 2% 10%;
+        
     }
 
-    #SobreMi{
-        margin-bottom: 12%;
+    .textoExtraC{
+        font-size: 1.4rem;
     }
 
-    #Contactame{
-        margin-bottom: 14%;
+     #cajaSobreMi .sobremi p {
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (min-width: 2560px) {
+    
+    #reproductor span {
+        margin: 0.5% -0.5% 0.5% 0;
+        padding: 2% 2%;
     }
 
-    /* Presentacion */
-    .cajaPresentacion {
-        text-align: center;
-        font-family: 'Tektur', sans-serif;
-        animation: shadow-box-pres backwards infinite 1.5s;
-        border-radius: 10px;
-        padding: 1% 4%;
-        background-color: #111;
-    }
-
-    .cajaPresentacion h1,
-    footer h1 {
-        background: linear-gradient(#ffbf80, #ff8401, #a52112);
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        font-size: 5rem;
-        animation: fade linear infinite 5s;
-    }
-
-    .cajaPresentacion h3 {
-        font-family: 'Enchanted Land', sans-serif;
-        font-size: 5rem;
-        margin-bottom: -1%;
-    }
-
-    .cajaPresentacion h2 {
-        font-size: 3rem;
-    }
-
-    #imgPresentacion {
-        width: 40%;
-        animation: dragonImg linear infinite 1.5s;
-    }
-
-    /* NavigatorBar */
-    nav {
-        font-family: 'Genos', sans-serif;
-        position: fixed;
-        top: 20%;
-        margin-left: 1%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 6%;
-        background-color: #111;
-        padding: 1.25% 0.6%;
-        box-shadow: 0px 0px 3px 5px #a52112;
-        border-radius: 40px;
-        transition: ease 0.3s;
-        z-index: 10;
-    }
-
-    /* NavIcon */
-    nav a {
-        margin: 10% 0;
-        color: white;
-        text-align: center;
-        transition: ease 0.5s;
-        text-decoration: none;
+    #navBar p{
+        font-size: 2.2rem;
     }
 
     .iconosNav{
-        font-size: 8rem;
-    }
-
-    nav a p {
-        margin: 0 0 1% 0;
-        display: none;
-        font-size: 3rem;
-    }
-
-    /* Titulos */
-    .marcoTitulo {
-        background-color: #754d3b;
-        padding: 1% 5%;
-        transform: rotate(9deg);
-        transition: ease 0.3s;
-        border: 8px solid #4a2e21;
-        border-radius: 10px;
-    }
-
-    .marcoTitulo:hover {
-        transform: rotate(0deg);
-        transition: ease 0.6s;
-    }
-
-    .titulos {
-        margin: 0;
-        background: linear-gradient(#ffbf80, #ff8401, #a52112);
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        font-family: 'Enchanted Land', sans-serif;
         font-size: 5rem;
     }
-
-    /* Cajas Habilidades */
-    .frameBorde {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-        text-align: center;
-        width: 100%;
-        animation: shadow-blue-box-pres linear infinite 2s;
-        border: none;
-        border-radius: 20px;
-        margin: 2% 0;
-        padding: 3% 0;
-    }
-
-    .frameBorde:hover {
-        background-color: #064e69;
-        transition: ease 0.5s;
-    }
-
-    .frameBorde legend {
-        background-color: #000;
-        padding: 1% 5%;
-        animation: shadow-blue-box-pres linear infinite 2s;
-        border-radius: 10px;
-        font-family: 'Genos', sans-serif;
-        font-size: 5rem;
-    }
-
-    /* Iconos Habilidades */
-    .IconosHab {
-        border-radius: 20px;
-        margin: 1% 0.1%;
-        transition: ease 0.4s;
-        width: 22%;
-    }
-
-    .IconosHab:hover {
-        box-shadow: 0px 0px 18px 1px black;
-        transition: ease 0.2s;
-    }
-
-    .IconosHab.Bronce,
-    .IconosHerr.Bronce {
-        background: linear-gradient(90deg, #e38162, #753b28);
-    }
-
-    .IconosHab.Plata,
-    .IconosHerr.Plata {
-        background: linear-gradient(90deg, white, gray);
-    }
-
-    .IconosHab.Oro,
-    .IconosHerr.Oro {
-        background: linear-gradient(90deg, #f1e7a1, #b37f25);
-    }
-
-    .IconosHab img {
-        padding: 6%;
-        width: 60%;
-    }
-
-    .IconosHab p {
-        font-family: 'Tektur', sans-serif;
-        font-size: 3rem;
-        background: linear-gradient(#4eb4d9, #089dd4, #1a6a87);
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-    }
-
-    .IconosHab.Bronce p {
-        background: linear-gradient(white 50%, gray);
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-    }
-
-    /* Caja Proyectos y relacionados*/
-    .cajaProyecto {
-        width: 50%;
-        text-align: center;
-        font-family: 'Tektur', sans-serif;
-        margin: 2% 0;
-    }
-
-    .cajaProyecto p {
-        margin: 0 25%;
-        margin-top: 3%;
-        background: linear-gradient(90deg, #773e94, #3b2049);
-        border-radius: 50px;
-        width: 50%;
-        padding: 3%;
-        font-size: 2.3rem;
-    }
-
-    .proyectoImg {
-        width: 90%;
-        background: url('./effects/glitch.gif');
-        padding: 1.5%;
-        border-top-right-radius: 30px;
-        border-bottom-left-radius: 30px;
-    }
-
-    .contenedorImgP {
-        position: relative;
-        cursor: pointer;
-    }
-
-    .cajaHerramientas {
-        display: none;
-        position: absolute;
-        justify-content: end;
-        top: 87%;
-        width: 95%;
-    }
-
-    .cajaProyecto:hover .cajaHerramientas {
-        display: flex;
-        animation: normal linear aparecer-der 0.5s;
-    }
-
-    .IconosHerr {
-        border-radius: 20px;
-        margin: 0% 0.1%;
-        width: 6%;
-        padding: 0.8% 2%;
-    }
-
-    /* Carousel */
-    .cajaPresentacion.sobremi {
-        width: 60%;
-        height: 880px;
-        font-size: 2rem;
-    }
-
-    .carousel {
-        display: flex;
-        align-items: center;
-        overflow: hidden;
-    }
-
-    .carousel-img {
-        width: 40%;
-        margin-left: 4%;
-    }
-
-    .carousel span {
-        margin: 0 1%;
-        padding: 18% 1%;
-        cursor: pointer;
-        text-align: center;
-        font-family: 'Tektur', sans-serif;
-        font-size: 2rem;
-        z-index: 3;
-    }
-
-    .letraCarousel,
-    .carouselDiv {
-        position: absolute;
-        right: 0;
-        margin: 1% 2%;
-        transition: transform 1s ease;
-        opacity: 0;
-        white-space: pre-line;
-    }
-
-    .letraCarousel.der,
-    .carouselDiv.der {
-        transform: translate(30%);
-    }
-
-    .letraCarousel.izq,
-    .carouselDiv.izq {
-        transform: translate(-30%);
-    }
-
-    .letraCarousel.activo,
-    .carousel div.activo {
-        position: relative;
-        transform: translate(0%);
-        opacity: 1;
-    }
-
-    .carousel div {
-        width: 10%;
-    }
-
-    .carousel div.activo {
-        width: 100%;
-    }
-
-    .carousel div img {
-        width: 100%;
-        border-radius: 20px;
-    }
-
-    .textoExtraC {
-        text-align: center;
-        font-family: 'Tektur', sans-serif;
-    }
-
-    /* Contactame */
-    #cajaIconos {
-        width: 90%;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-        font-family: 'Enchanted Land', sans-serif;
-    }
-
-    #cajaIconos a {
-        text-align: center;
-        text-decoration: none;
-        width: 30%;
-        padding-top: 3.5%;
-        border-top-left-radius: 100px;
-        border-bottom-right-radius: 100px;
-        color: white;
-        margin: 1.2% 0;
-    }
-
-    #cajaIconos a:nth-child(1) {
-        transition: ease 0.2s;
-        border: 2px solid white;
-        background: linear-gradient(150deg, #b3392b, #000);
-    }
-
-    #cajaIconos a:nth-child(1):hover {
-        box-shadow: 0px 0px 8px 6px #a52112;
-    }
-
-    #cajaIconos a:nth-child(2) {
-        transition: ease 0.2s;
-        border: 2px solid white;
-        background: linear-gradient(150deg, #28a9d8, #000);
-    }
-
-    #cajaIconos a:nth-child(2):hover {
-        box-shadow: 0px 0px 8px 6px #089dd4;
-    }
-
-    #cajaIconos a:nth-child(3) {
-        transition: ease 0.2s;
-        border: 2px solid white;
-        background: linear-gradient(150deg, #a66bc4, #000);
-    }
-
-    #cajaIconos a:nth-child(3):hover {
-        box-shadow: 0px 0px 8px 6px #773e94;
-    }
-
-    #cajaIconos a:nth-child(4) {
-        transition: ease 0.2s;
-        border: 2px solid white;
-        background: linear-gradient(150deg, #e6953f, #000);
-    }
-
-    #cajaIconos a:nth-child(4):hover {
-        box-shadow: 0px 0px 8px 6px #ff8401;
-    }
-
-    #cajaIconos a:nth-child(5) {
-        transition: ease 0.2s;
-        border: 2px solid white;
-        background: linear-gradient(150deg, #12b112, #000);
-    }
-
-    #cajaIconos a:nth-child(5):hover {
-        box-shadow: 0px 0px 8px 6px #068606;
-    }
-
-    #cajaIconos a i {
-        font-size: 7rem;
-    }
-
-    #cajaIconos a p {
-        font-size: 2rem;
-    }
-
-    /* Footer */
-    footer {
-        width: 120%;
-        text-align: center;
-        font-family: 'Tekur', sans-serif;
-    }
-
-    footer h1 {
-        font-size: 2rem;
-        animation: footer-anim linear infinite 3s;
-    }
-
-    /* Modal */
-    .modal {
-        display: none;
-    }
-
-    /* .modal.mostrar {
-        z-index: 101;
-        display: block;
-        position: absolute;
-        width: 120%;
-        height: 120vh;
-        background: linear-gradient(#773e94, black);
-    }
-
-    .cuadroModal {
-        display: flex;
-        flex-direction: column;
-        margin: 3% 3%;
-        width: 90%;
-        height: 100vh;
-        font-family: 'Tektur', sans-serif;
-        border: 2px solid white;
-        border-radius: 20px;
-        padding: 1.5%;
-    } */
-
+    
     .cuadroModal .carousel {
-        width: 80%;
-        margin: 1% 11%;
-    }
-
-    .cuadroModal .carousel video,
-    .cuadroModal .carousel img {
         width: 100%;
-        border-radius: 20px;
-        border: 2px solid white;
+        margin: 8% 10.5%;
+        
     }
 
-    .cuadroModal .carousel p {
-        user-select: text;
-        color: white;
-        font-size: 2.3rem;
+    .textoExtraC{
+        font-size: 1.5rem;
     }
 
-    .cuadroModal span {
-        cursor: pointer;
-        font-size: 1.3rem;
-        margin-left: 1%;
+     #cajaSobreMi .sobremi p {
+        font-size: 1.5rem;
     }
+}
 
-    /* Animaciones */
-    @keyframes fade {
-
-        0%,
-        100% {
-            opacity: 1;
-        }
-
-        50% {
-            opacity: 0.2;
-        }
-    }
-
-    @keyframes shadow-box-pres {
-
-        0%,
-        100% {
-            box-shadow: 0px 0px 10px 18px #ff8401;
-        }
-
-        50% {
-            box-shadow: 0px 0px 3px 5px #a52112;
-        }
-    }
-
-    @keyframes shadow-blue-box-pres {
-
-        0%,
-        100% {
-            box-shadow: 0px 0px 10px 18px #089dd4;
-        }
-
-        50% {
-            box-shadow: 0px 0px 3px 5px #1a6a87;
-        }
-    }
-
-    @keyframes dragonImg {
-
-        0%,
-        100% {
-            transform: translateY(-3%);
-        }
-
-        50% {
-            transform: translateY(3%);
-        }
-    }
-
-    @keyframes aparecer-der {
-        0% {
-            left: 20%;
-            opacity: 0;
-        }
-
-        100% {
-            left: 0%;
-            opacity: 1;
-        }
-    }
-
-    @keyframes footer-anim {
-        0% {
-            box-shadow: 0 0 10px 4px #a52112;
-        }
-
-        25% {
-            box-shadow: 0 0 10px 4px #064e69;
-        }
-
-        50% {
-            box-shadow: 0 0 10px 4px #773e94;
-        }
-
-        75% {
-            box-shadow: 0 0 10px 4px #ff8401;
-        }
-
-        100% {
-            box-shadow: 0px 0px 8px 6px #068606;
-        }
-    }
+#inicio, #habilidades, #proyectos, #SobreMi{
+    margin-bottom: 75%;
 }

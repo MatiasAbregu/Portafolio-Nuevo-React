@@ -12,7 +12,7 @@ export const Reproductor = () => {
             reproductorActivado = false;
             flecha.innerText = "<";
         } else {
-            musica.style.width = "50%";
+            musica.style.width = "90%";
             reproductorActivado = true;
             flecha.innerText = ">";
         }
