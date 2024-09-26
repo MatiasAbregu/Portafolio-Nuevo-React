@@ -38,19 +38,34 @@ import Nuget from './img/nuget.svg'
 import Photoshop from './img/photoshop.svg'
 import phpmyadmin from './img/phpmyadmin.svg'
 import React from './img/react.svg'
+import MUI from './img/mui.svg'
 import Spring from './img/spring.svg'
+import Springboot from './img/springboot.svg'
+import Springsecurity from './img/springsecurity.svg'
+import JUnit from './img/junit5.svg'
 import SQLite from './img/sqlite.svg'
 import tomcat from './img/tomcat.svg'
+import Docker from './img/docker.svg'
+import Postman from './img/postman.svg'
 import VSCode from './img/vscode.svg'
 import VisualStudio from './img/visualstudio.svg'
 import Netbeans from './img/netbeans.svg'
 import Eclipse from './img/eclipse.svg'
+import Python from './img/python.svg'
+import Typescript from './img/typescript.svg'
 
 //Mis fotos
 import Yo2022 from './img/Retrato.jpg'
-import Yo2023 from './img/Retrato2.jpg'
+import Yo2024Actual from './img/Retrato2.jpg'
 import Yo2023Fines from './img/Retrato4.jpg'
 import Yo2024 from './img/Retrato3.jpg'
+
+//Proyecto Hackacode
+import hackacode1 from './projects/HackacodeProject/Imagen1.png'
+import hackacode2 from './projects/HackacodeProject/Imagen2.jpg'
+import hackacode3 from './projects/HackacodeProject/Imagen3.png'
+import hackacode4 from './projects/HackacodeProject/Imagen4.png'
+import hackacode5 from './projects/HackacodeProject/Imagen5.png'
 
 //Proyecto Airlines
 import videoAirlines from './projects/Airlines/VideoMatiasAirlines.mp4';
@@ -254,22 +269,25 @@ function App() {
         <Title>Habilidades</Title>
         <br /><br /><br /><br />
         <div className='cajas'>
-          <Frame iconos={[["Java", Java, "Oro"], ["Javascript", JS, "Oro"], ["C#", CSharp, "Plata"], ["Luau", LUA, "Plata"]]}>
+          <Frame iconos={[["Java", Java, "Oro"], ["Javascript", JS, "Oro"], ["C#", CSharp, "Plata"], ["Luau", LUA, "Plata"], ["Python", Python, "Plata"], ["Typescript", Typescript, "Bronce"]]}>
             Lenguajes de Programación
           </Frame>
           <Frame iconos={[["MySQL", MySQL, "Oro"], ["PHPMyAdmin", phpmyadmin, "Oro"], ["SQLite", SQLite, "Oro"], ["MongoDB", Mongo, "Plata"]]}>
             Bases de Datos Relacionales y No Relacionales
           </Frame>
-          <Frame iconos={[["Bootstrap", BootStrap, "Plata"], [".NET", NET, "Bronce"], ["Express.js", Express, "Plata"], ["Spring", Spring, "Plata"]]}>
+          <Frame iconos={[["Bootstrap", BootStrap, "Plata"], [".NET", NET, "Bronce"], ["Express.js", Express, "Plata"], ["Spring", Spring, "Oro"]]}>
             Frameworks
           </Frame>
-          <Frame iconos={[["Hibernate", Hibernate, "Bronce"], ["Mongoose", Mongoose, "Bronce"]]}>
+          <Frame iconos={[["SpringBoot", Springboot, "Plata"], ["SpringSecurity", Springsecurity, "Bronce"], ["JUnit5 + Mockito", JUnit, "Bronce"]]}>
+            Herramientas que uso con Spring
+          </Frame>
+          <Frame iconos={[["Hibernate", Hibernate, "Oro"], ["Mongoose", Mongoose, "Bronce"]]}>
             ORM y ODM
           </Frame>
-          <Frame iconos={[["Maven", Maven, "Oro"], ["NPM", NPM, "Oro"], ["Nuget", Nuget, "Bronce"]]}>
+          <Frame iconos={[["Maven", Maven, "Oro"], ["NPM", NPM, "Oro"], ["Nuget", Nuget, "Plata"]]}>
             Gestores de Paquetes y Proyectos
           </Frame>
-          <Frame iconos={[["React", React, "Plata"], ["Node.js", Node, "Plata"], ["CSS3", CSS, "Oro"], ["HTML5", HTML, "Oro"], ["Handlebars", Handlebars, "Bronce"]]}>
+          <Frame iconos={[["React", React, "Oro"], ["Node.js", Node, "Plata"], ["CSS3", CSS, "Oro"], ["HTML5", HTML, "Oro"], ["Handlebars", Handlebars, "Bronce"], ["MUI", MUI, "Plata"]]}>
             Herramientas para uso Web
           </Frame>
           <Frame iconos={[["GIT", GIT, "Oro"], ["GitHub", Github, "Oro"]]}>
@@ -279,7 +297,7 @@ function App() {
           ["Android Studio", Android, "Plata"]]}>
             Entornos de Desarrollo
           </Frame>
-          <Frame iconos={[["Tomcat", tomcat, "Oro"], ["Word", Word, "Plata"], ["PowerPoint", PowerPoint, "Plata"], ["Canva", Canva, "Plata"], ["Photoshop", Photoshop, "Oro"]]}>
+          <Frame iconos={[["Tomcat", tomcat, "Oro"], ["Postman", Postman, "Oro"], ["Docker", Docker, "Bronce"], ["Word", Word, "Plata"], ["PowerPoint", PowerPoint, "Plata"], ["Canva", Canva, "Plata"], ["Photoshop", Photoshop, "Oro"]]}>
             Otros
           </Frame>
         </div>
@@ -290,6 +308,10 @@ function App() {
         <img src='/retro.jpg' alt='' id='fondo2' />
         <br /><br /><br /><br /><br /><br /><br />
         <div className='cajas'>
+          <Frame2 estrella={true} img={hackacode1} herramientas={[[Java, "Oro"], [Springboot, "Plata"], [Hibernate, "Oro"], [Springsecurity, "Bronce"], [JUnit, "Bronce"], [JS, "Oro"], [React, "Oro"], [MUI, "Plata"], [GIT, "Oro"], [Github, "Oro"]]} funcionModal={establecerModal} contenido={[[hackacode1, "Proyecto llevado a cabo en competición de programación en dónde logré quedar en primer puesto. Además de las herramientas mostradas anteriormente use: Netbeans, Visual Studio Code, MySQL, Docker, JWT y CryptoJS, etc..."], [hackacode2, ""], [hackacode3, "Si bien la imagen anterior dice que fue en equipo, el proyecto fue realizado en su totalidad por mi... Estando enfermo y con mis compañeros desaparecidos... Fue una competición dónde aprendí muchisimo en todos los aspectos y dónde recibi ayuda de mi Project Manager y sus amigos cerca del final para el despliegue de la aplicación..."], [hackacode4, "Pero en conclusión, me divertí bastante aunque sufrí, no es para negarlo. ¡Pero sin sufrimiento no hay aprendizaje! De corazón estoy agradecido por todo lo que viví en ese evento. \n\n• Link a la página: http://vps-3991849-x.dattaweb.com:5173"], [hackacode5, "• Link al repo back: https://github.com/MatiasAbregu/Repositorio-Backend-Grupo2 \n• Link al repo front: https://github.com/MatiasAbregu/Repositorio-Frontend-Grupo2 \n• Link al directo de presentación: https://www.youtube.com/watch?v=nF1zVrUPl8c&t=6492s"]]}>
+            Proyecto Ganador de Hackacode 🌟
+          </Frame2>
+
           <Frame2 img={Arandu} herramientas={[[Android, "Plata"], [VSCode, "Oro"], [Java, "Oro"], [Node, "Plata"], [HTML, "Oro"], [CSS, "Oro"], [JS, "Oro"],
           [Github, "Oro"], [GIT, "Oro"]]} funcionModal={establecerModal} contenido={[[Arandu, "Debido a que es un proyecto para un cliente no puedo revelar código acerca del mismo pero puedo mostrar muy pocas imágenes de como sería la app. Pero es una app de finanzas desarollada por mi empresa llamada Patito Software."], [Arandu2, "Acá se ve lo que sería el inicio de la aplicación móvil. Desarrollada con Java en AndroidStudio y que contará con una conexión a una Base De Datos."], [Arandu3, "Una página web que contará con Node y también se relacionará con una Base de Datos."]]}>
             Proyecto Arandu </Frame2>
@@ -299,7 +321,7 @@ function App() {
             Proyecto Facundo </Frame2>
 
           <Frame2 img={Patito} herramientas={[[VSCode, "Oro"], [React, "Plata"], [HTML, "Oro"], [CSS, "Oro"], [JS, "Oro"], [Github, "Oro"]]}
-            funcionModal={establecerModal} contenido={[[Patito, "Sitio oficial de mi empresa, la cual se encarga de desarrollo de software. Link: https://matiasabregu.github.io/pagina-patito-sin-react/"], [Patito2, "Formulario para ponerse en contacto."], [Patito3, "Un poco de código React."], [Patito4, "Un poco de código React."], [Patito5, "Un poco de código HTML e inclusión de Bootstrap para el proyecto."], [Patito6, "Un poco de código React."]]}>
+            funcionModal={establecerModal} contenido={[[Patito, "Sitio oficial de mi empresa, la cual se encarga de desarrollo de software. \n\n• Link: https://matiasabregu.github.io/pagina-patito-sin-react/"], [Patito2, "Formulario para ponerse en contacto."], [Patito3, "Un poco de código React."], [Patito4, "Un poco de código React."], [Patito5, "Un poco de código HTML e inclusión de Bootstrap para el proyecto."], [Patito6, "Un poco de código React."]]}>
             Página de Patito</Frame2>
 
           <Frame2 img={CrudNode} herramientas={[[VSCode, "Oro"], [Node, "Plata"], [Handlebars, "Bronce"], [HTML, "Oro"], [CSS, "Oro"], [JS, "Oro"],
@@ -372,10 +394,10 @@ function App() {
           <div className='cajaPresentacion sobremi'>
             <h1>A continuación...</h1>
             <hr />
-            <Carousel tipo={2} item={[["¡Hola! Soy Matías Abregú Danieli, un joven programador con mucha ambición. Yendo al grano porque no me gusta hacer perder el tiempo, si quieres saber mis fortalezas y debilidades acá van: \n\n• Fortalezas: Líder (dependiendo de la gente que me rodee), Resiliente, Perseverante, Autoexigente, Proactivo, Curioso, Determinado, Noble, Honesto, Responsable, Realista y Disciplinado. \n\n• Debilidades: Impaciente, Enojon, Desconfio en el resto, Perfeccionista, Difícil de convencer, Individualista y Torpe."],
+            <Carousel tipo={2} item={[["¡Hola! Soy Matías Abregú Danieli, un joven programador con mucha ambición. Bien... ¿Qué pueden esperar de mi? \n\nFortalezas: Líder (muy predispuesto a ayudar al resto), Resiliente, Perseverante, Autoexigente, Proactivo, Curioso, Determinado, Noble, Honesto, Responsable, Realista y Disciplinado."],
             ["Bien, ahora si te gustaría saber un poco más de mi para comprender muchas de las cosas que dije entonces lee a continuación porque te contaré más de mi... \n\nComo se mencionó en mi anterior portafolio soy un chico que busca ayudar a la gente a comprender mucho más la tecnología, en un mundo que cambia constantemente. Bien, realmente yo soy asi debido a que en mi familia soy el que más sabe de tecnología y siempre ando solucionando sus problemas, lo interesante es que yo descubrí mi pasión por la programación y las computadoras a la edad de 6 años. Desde entonces siempre quise involucrarme con todo su mundo, no fue hasta la edad de 14 años que decidí tener la iniciativa y aprendí a programar con un curso en internet sobre Java, el lenguaje con el que la gran mayoría de mis proyectos están hechos."], ["Lo gracioso es que a esa edad yo no me tomaba en serio la programación y sobre todo había comenzado a programar con un amigo que le SALIA TODO, en lo cual generó la creencia de que yo era un inútil para esto. Desde entonces abandoné la programación y no fue hasta los 16 años que volvi a retomarla pero esta vez aprendiendo C++ (Lenguaje con sintaxis compleja) pero que a mi a la larga no me generó complicación y pude programar alguna que otra cosita pequeña que me dio motivación pero a la larga la volvi a abandonar esta vez por los videojuegos. Entre años y años siempre fui muy curioso por explorar y aprender de TODO, lo cual hacia creer que tal vez la programación no era lo mio al fin y al cabo..."], ["Paso el tiempo y a fines de 2021 pensé, realmente ¿Qué estoy haciendo con mi vida? Fue ahi cuando dije, esto no puede ser asi, desde entonces comence con lo básico, entrenando mi cuerpo. Luego pase a adquirir habilidades sociales, luego dije que la programación era a lo que me quería dedicar dado que sino mi sueño no se haría realidad. En 2022 fue el gran cambio en mi vida, donde a día de hoy todo lo que hice lo sigo haciendo por más que no tenga ni una pizca de ganas e inclusive agregué nuevas tareas para endurecer más mi disciplina. Como dije, a día de hoy sigo haciendo todo e inclusive más lo más interesante es que gracias a mi concentración, exigencia, curiosidad y pasión (porque si, realmente me apasiona la programación sino no haría esto) he logrado hacer muchas cosas, desde programar una calculadora hasta hacer proyectos para gente de mi país y del extranjero, todos, trabajando codo a codo con amigos y compañeros."]]} />
           </div>
-          <Carousel tipo={1} item={[[Yo2022, "Yo en 2022"], [Yo2023, "Mi físico a principios de 2023"], [Yo2023Fines, "Mi físico a finales de 2023"], [Yo2024, "Yo ahora en 2024"]]} />
+          <Carousel tipo={1} item={[[Yo2022, "Yo en 2022"], [Yo2023Fines, "Mi físico que es el reflejo de mi disciplina y compromiso con las cosas"], [Yo2024, "Yo a principios de 2024"], [Yo2024Actual, "Yo con un regalo preciado de mi abuela actualmente en 2024"]]} />
         </div>
         <br />
       </section>
@@ -390,7 +412,7 @@ function App() {
           <SocialIcon iconoNombre={"bi-discord"} direccion={"https://discord.com/users/292346182238470153"}>Discord</SocialIcon>
           <SocialIcon iconoNombre={"bi-envelope"} direccion={"mailto:matiasabregu506@gmail.com"}>Email</SocialIcon>
           <SocialIcon iconoNombre={"bi-instagram"} direccion={"https://www.instagram.com/matias_abregu08/"}>Instagram</SocialIcon>
-  
+
         </div>
       </section>
       <br /><br /><br /><br />

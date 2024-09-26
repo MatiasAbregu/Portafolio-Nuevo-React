@@ -1,7 +1,7 @@
 import React from "react";
 import { SkillIcon2 } from "./SkillIcon2";
 
-export const Frame2 = ({ img, children, herramientas, funcionModal, contenido }) => {
+export const Frame2 = ({ img, children, herramientas, funcionModal, contenido, estrella }) => {
 
     let herramientasEtiq;
     let nombre = children.replaceAll(" ", "").replaceAll("á", "a").replaceAll(/[!#$%&/()=?¡¿-]/g, "");
@@ -11,7 +11,7 @@ export const Frame2 = ({ img, children, herramientas, funcionModal, contenido })
     }
 
     return (
-        <div className="cajaProyecto" id={nombre} onClick={() => funcionModal(contenido)}>
+        <div className={`cajaProyecto ${estrella ? "estrella" : ""}`} id={nombre} onClick={() => funcionModal(contenido)}>
             <div className="contenedorImgP">
                 <img src={img} alt="" className="proyectoImg" />
                 <div className="cajaHerramientas">
