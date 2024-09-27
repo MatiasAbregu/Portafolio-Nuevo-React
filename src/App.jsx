@@ -242,7 +242,7 @@ function App() {
   }
 
   useEffect(() => {
-    document.getElementById("fondo1").style.height = `${document.getElementById("inicio").getBoundingClientRect().height + 10}px`;
+    document.getElementById("fondo1").style.height = `${document.getElementById("inicio").getBoundingClientRect().height + 180}px`;
     document.getElementById("fondo2").style.height = `${document.getElementById("proyectos").getBoundingClientRect().height + 10}px`;
     document.getElementById("fondo3").style.width = `${document.getElementById("Contactame").getBoundingClientRect().width + 300}px`;
     document.getElementById("fondo3").style.height = `${document.getElementById("Contactame").getBoundingClientRect().height + 60}px`;

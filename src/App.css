@@ -536,10 +536,13 @@ footer h1 {
     margin: 5% 15%;
     width: 70%;
     height: fit-content;
+    max-height: 90vh;
     font-family: 'Tektur', sans-serif;
     border: 2px solid white;
     border-radius: 20px;
     padding: 1.5%;
+    overflow-y: auto;
+    overflow-x: hidden
 }
 
 .cuadroModal .carousel {
@@ -548,7 +551,7 @@ footer h1 {
     overflow: initial;
 }
 
-.cuadroModal .carousel .carouselDiv p{
+.cuadroModal .carousel .carouselDiv p {
     text-wrap: wrap;
     word-wrap: break-word;
 }
@@ -869,6 +872,9 @@ footer h1 {
         margin: 3% 3%;
         width: 90%;
         height: fit-content;
+        max-height: 90vh;
+        overflow-y: auto;
+        overflow-x: hidden;
     }
 
     .cuadroModal .carousel {
@@ -1105,7 +1111,10 @@ footer h1 {
     .cuadroModal {
         margin: 3% 3%;
         width: 90%;
-        height: fit-content
+        height: fit-content;
+        max-height: 90vh;
+        overflow-y: auto;
+        overflow-x: hidden
     }
 
     .cuadroModal .carousel {
@@ -1323,6 +1332,9 @@ footer h1 {
         margin: 3% 3%;
         width: 90%;
         height: fit-content;
+        max-height: 90vh;
+        overflow-y: auto;
+        overflow-x: hidden
     }
 
     .cuadroModal .carousel {
@@ -1591,6 +1603,9 @@ footer h1 {
         border: 2px solid white;
         border-radius: 20px;
         padding: 1.5%;
+        max-height: 90vh;
+        overflow-y: auto;
+        overflow-x: hidden
     }
 
     .cuadroModal .carousel {
