@@ -176,14 +176,14 @@ import Facundo6 from './projects/ProyectoFacundo/Facundo6.png';
 import Facundo7 from './projects/ProyectoFacundo/VideoTuruWan.mp4';
 
 //Proyectos Extras Java
-import ProyectosExtras from './projects/ProyectosExtrasDeJava/ProyectosExtras.png';
-import ProyectosExtras2 from './projects/ProyectosExtrasDeJava/ProyectosExtras2.png';
-import ProyectosExtras3 from './projects/ProyectosExtrasDeJava/ProyectosExtras3.png';
-import ProyectosExtras4 from './projects/ProyectosExtrasDeJava/ProyectosExtras4.png';
-import ProyectosExtras5 from './projects/ProyectosExtrasDeJava/ProyectosExtras5.png';
-import ProyectosExtras6 from './projects/ProyectosExtrasDeJava/ProyectosExtras6.png';
-import ProyectosExtras7 from './projects/ProyectosExtrasDeJava/ProyectosExtras7.png';
-import ProyectosExtras8 from './projects/ProyectosExtrasDeJava/ProyectosExtras8.png';
+import ProyectosExtras from './projects/ProyectosExtrasDeJava/proyectosExtras.png';
+import ProyectosExtras2 from './projects/ProyectosExtrasDeJava/proyectosExtras2.png';
+import ProyectosExtras3 from './projects/ProyectosExtrasDeJava/proyectosExtras3.png';
+import ProyectosExtras4 from './projects/ProyectosExtrasDeJava/proyectosExtras4.png';
+import ProyectosExtras5 from './projects/ProyectosExtrasDeJava/proyectosExtras5.png';
+import ProyectosExtras6 from './projects/ProyectosExtrasDeJava/proyectosExtras6.png';
+import ProyectosExtras7 from './projects/ProyectosExtrasDeJava/proyectosExtras7.png';
+import ProyectosExtras8 from './projects/ProyectosExtrasDeJava/proyectosExtras8.png';
 
 //Sistema Vuelo
 import SVA1 from './projects/SistemaVuelo-Android/AndroidVolar1.png';
