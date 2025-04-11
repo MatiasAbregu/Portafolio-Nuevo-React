@@ -97,12 +97,12 @@ import Norex5 from './projects/Norex/NorexC3.png';
 import Norex6 from './projects/Norex/NorexC4.png';
 
 //Antiguo Portafolio
-import AntPort from './projects/AntiguoPortafolio/portafolio1.png';
-import antPortIMG from './projects/AntiguoPortafolio/portafolio2.png';
-import antPortIMG2 from './projects/AntiguoPortafolio/portafolio3.png';
-import antPortIMG3 from './projects/AntiguoPortafolio/portafolio4.png';
-import antPortIMG4 from './projects/AntiguoPortafolio/portafolio5.png';
-import antPortIMG5 from './projects/AntiguoPortafolio/portafolio6.png';
+import AntPort from './projects/AntiguoPortafolio/Portafolio1.png';
+import antPortIMG from './projects/AntiguoPortafolio/Portafolio2.png';
+import antPortIMG2 from './projects/AntiguoPortafolio/Portafolio3.png';
+import antPortIMG3 from './projects/AntiguoPortafolio/Portafolio4.png';
+import antPortIMG4 from './projects/AntiguoPortafolio/Portafolio5.png';
+import antPortIMG5 from './projects/AntiguoPortafolio/Portafolio6.png';
 
 //App Supermercado
 import AppSuper from './projects/AppSupermercado/App1.png';
