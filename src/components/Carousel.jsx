@@ -47,14 +47,14 @@ export const Carousel = ({ tipo, item, condicion }) => {
             listaItem = item.map((i, index) => {
                 if (i[0].endsWith(".mp4") || i[0].endsWith(".mov")) {
                     return (
-                        <div className={`carouselDiv ${index === indexActual ? "activo" : ""}`}>
+                        <div className={`carouselDiv ${index === indexActual ? "activo" : ""}`} key={index}>
                             <video controls src={i[0]}></video>
                             <p className="textoExtraC">{i[1]}</p>
                         </div>
                     );
                 } else {
                     return (
-                        <div className={`carouselDiv ${index === indexActual ? "activo" : ""}`}>
+                        <div className={`carouselDiv ${index === indexActual ? "activo" : ""}`} key={index}>
                             <img src={i[0]} alt="" />
                             <p className="textoExtraC">{i[1]}</p>
                         </div>
@@ -71,7 +71,7 @@ export const Carousel = ({ tipo, item, condicion }) => {
         );
     } else {
         if (item) {
-            listaItem = item.map((i, index) => <p className={`letraCarousel ${index === indexActual ? "activo" : ""}`}>
+            listaItem = item.map((i, index) => <p className={`letraCarousel ${index === indexActual ? "activo" : ""}`} key={index}>
                 {i[0]}
             </p>)
         }

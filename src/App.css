@@ -535,8 +535,7 @@ footer h1 {
     flex-direction: column;
     margin: 5% 15%;
     width: 70%;
-    height: fit-content;
-    max-height: 90vh;
+    height: 75vh;
     font-family: 'Tektur', sans-serif;
     border: 2px solid white;
     border-radius: 20px;
@@ -1598,7 +1597,6 @@ footer h1 {
         flex-direction: column;
         margin: 3% 10%;
         width: 80%;
-        height: fit-content;
         font-family: 'Tektur', sans-serif;
         border: 2px solid white;
         border-radius: 20px;

@@ -9,6 +9,7 @@ import { Carousel } from './components/Carousel'
 import { SocialIcon } from './components/SocialIcon'
 import { useEffect, useState } from 'react'
 import { Modal } from './components/Modal'
+import { motion } from 'framer-motion'
 
 //Habilidades
 import Java from './img/java.svg'
@@ -57,7 +58,6 @@ import Typescript from './img/typescript.svg'
 //Mis fotos
 import Yo2022 from './img/Retrato.jpg'
 import Yo2024Actual from './img/Retrato2.jpg'
-import Yo2023Fines from './img/Retrato4.jpg'
 import Yo2024 from './img/Retrato3.jpg'
 
 //Proyecto Hackacode
@@ -222,11 +222,34 @@ import Concesionario5 from './projects/ConcesionarioBrolto/Concesionario5.png';
 import Concesionario6 from './projects/ConcesionarioBrolto/Concesionario6.png';
 import Concesionario7 from './projects/ConcesionarioBrolto/video.mp4';
 
+// Dentalis Historias
+import DentalisI from './projects/DentalisHistorias/DentalisI.png';
+import DentalisH1 from './projects/DentalisHistorias/Dentalis1.png';
+import DentalisH2 from './projects/DentalisHistorias/Dentalis2.png';
+import DentalisH3 from './projects/DentalisHistorias/Dentalis3.png';
+import DentalisH4 from './projects/DentalisHistorias/Dentalis4.png';
+import DentalisH5 from './projects/DentalisHistorias/Dentalis5.png';
+
+// Dentalis Turnero
+import DentalisTI from './projects/DentalisTurnero/DentalisTI.png';
+import DentalisT1 from './projects/DentalisTurnero/DentalisT1.png';
+import DentalisT2 from './projects/DentalisTurnero/DentalisT2.png';
+import DentalisT3 from './projects/DentalisTurnero/DentalisT3.png';
+import DentalisT4 from './projects/DentalisTurnero/DentalisT4.png';
+import DentalisT5 from './projects/DentalisTurnero/DentalisT5.png';
+
+// Code Void
+import CodeVoid1 from './projects/CodeVoid/CodeVoid1.png';
+import CodeVoid2 from './projects/CodeVoid/CodeVoid2.png';
+import CodeVoid3 from './projects/CodeVoid/CodeVoid3.png';
+import CodeVoid4 from './projects/CodeVoid/CodeVoid4.png';
+import { Language } from './components/Language'
 
 function App() {
 
   const [estadoModal, setEstadoModal] = useState(false);
   const [contenidoModal, setContenidoModal] = useState('');
+  const [idioma, setIdioma] = useState("espanol");
 
   const establecerModal = (contenido) => {
     setContenidoModal(contenido);
@@ -254,57 +277,68 @@ function App() {
       <Modal estado={estadoModal} contenido={contenidoModal} cerrarModal={desactivarModal} />
       <Reproductor />
       <NavigatorBar />
+      <Language idioma={idioma} setIdioma={setIdioma} />
       <br /><br /><br /><br /><br /><br />
       <section id='inicio'>
         <img src="/fondo1.jpg" alt="" id='fondo1' />
-        <div className='cajaPresentacion'>
-          <h3>Bienvenido al portafolio de...</h3>
+        <motion.div className='cajaPresentacion'
+          initial={{ opacity: 0, x: 100 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ type: "spring", bounce: 0.5, duration: 2 }}
+        >
+          <h3>{idioma == "espanol" ? "Bienvenido al portafolio de..." : "Welcome to the portfolio of..."}</h3>
           <h1>Matias Abregú</h1>
           <hr />
-          <h2>Desarrollador Web, Móvil y de Escritorio - Programador FullStack</h2>
-        </div>
-        <img src="/DragonNombre.png" alt="" id='imgPresentacion' />
+          <h2>{idioma == "espanol" ? "Desarrollador Web, Móvil y de Escritorio - Programador FullStack" :
+            "Web Developer, Mobile and Desktop - FullStack Developer"}</h2>
+        </motion.div>
+        <motion.img src="/DragonNombre.png" id='imgPresentacion'
+          initial={{ opacity: 0, x: 100 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ type: "spring", bounce: 0.5, duration: 2 }} />
       </section>
       <section id='habilidades'>
-        <Title>Habilidades</Title>
+        <Title>{idioma == "espanol" ? "Habilidades" : "Skills"}</Title>
         <br /><br /><br /><br />
         <div className='cajas'>
           <Frame iconos={[["Java", Java, "Oro"], ["Javascript", JS, "Oro"], ["C#", CSharp, "Plata"], ["Luau", LUA, "Plata"], ["Python", Python, "Plata"], ["Typescript", Typescript, "Bronce"]]}>
-            Lenguajes de Programación
+            {idioma == "espanol" ? "Lenguajes de Programación" : "Programming languages"}
           </Frame>
           <Frame iconos={[["MySQL", MySQL, "Oro"], ["PHPMyAdmin", phpmyadmin, "Oro"], ["SQLite", SQLite, "Oro"], ["MongoDB", Mongo, "Plata"]]}>
-            Bases de Datos Relacionales y No Relacionales
+            {idioma == "espanol" ? "Bases de Datos Relacionales y No Relacionales" : "Relational and non-relational databases"}
           </Frame>
           <Frame iconos={[["Bootstrap", BootStrap, "Plata"], [".NET", NET, "Bronce"], ["Express.js", Express, "Plata"], ["Spring", Spring, "Oro"]]}>
             Frameworks
           </Frame>
           <Frame iconos={[["SpringBoot", Springboot, "Plata"], ["SpringSecurity", Springsecurity, "Bronce"], ["JUnit5 + Mockito", JUnit, "Bronce"]]}>
-            Herramientas que uso con Spring
+            {idioma == "espanol" ? "Herramientas que uso con Spring" : "Tools that I use with Spring"}
           </Frame>
           <Frame iconos={[["Hibernate", Hibernate, "Oro"], ["Mongoose", Mongoose, "Bronce"]]}>
-            ORM y ODM
+            {idioma == "espanol" ? "ORM y ODM" : "ORM and ODM"}
           </Frame>
           <Frame iconos={[["Maven", Maven, "Oro"], ["NPM", NPM, "Oro"], ["Nuget", Nuget, "Plata"]]}>
-            Gestores de Paquetes y Proyectos
+            {idioma == "espanol" ? "Gestores de Paquetes y Proyectos" : "Package and project managers"}
           </Frame>
-          <Frame iconos={[["React", React, "Oro"], ["Node.js", Node, "Plata"], ["CSS3", CSS, "Oro"], ["HTML5", HTML, "Oro"], ["Handlebars", Handlebars, "Bronce"], ["MUI", MUI, "Plata"]]}>
-            Herramientas para uso Web
+          <Frame iconos={[["React", React, "Oro"], ["Node.js", Node, "Oro"], ["CSS3", CSS, "Oro"], ["HTML5", HTML, "Oro"], ["Handlebars", Handlebars, "Bronce"], ["MUI", MUI, "Plata"]]}>
+            {idioma == "espanol" ? "Herramientas para uso Web" : "Tools that I use on Web"}
           </Frame>
           <Frame iconos={[["GIT", GIT, "Oro"], ["GitHub", Github, "Oro"]]}>
-            Herramientas para trabajar en equipo/Control de Versiones
+            {idioma == "espanol" ? "Herramientas para trabajar en equipo/Control de Versiones" : "Tools for teamwork/Version Control"}
           </Frame>
-          <Frame iconos={[["Netbeans", Netbeans, "Oro"], ["Eclipse", Eclipse, "Plata"], ["VSCode", VSCode, "Oro"], ["Visual Studio", VisualStudio, "Plata"],
+          <Frame iconos={[["Netbeans", Netbeans, "Oro"], ["Eclipse", Eclipse, "Plata"], ["VSCode", VSCode, "Oro"], ["Visual Studio", VisualStudio, "Oro"],
           ["Android Studio", Android, "Plata"]]}>
-            Entornos de Desarrollo
+            {idioma == "espanol" ? "Entornos de Desarrollo" : "IDEs"}
           </Frame>
           <Frame iconos={[["Tomcat", tomcat, "Oro"], ["Postman", Postman, "Oro"], ["Docker", Docker, "Bronce"], ["Word", Word, "Plata"], ["PowerPoint", PowerPoint, "Plata"], ["Canva", Canva, "Plata"], ["Photoshop", Photoshop, "Oro"]]}>
-            Otros
+            {idioma == "espanol" ? "Otros" : "Others"}
           </Frame>
         </div>
       </section>
       <section id='proyectos'>
         <br />
-        <Title>Proyectos</Title>
+        <Title>{idioma == "espanol" ? "Proyectos" : "Projects"}</Title>
         <img src='/retro.jpg' alt='' id='fondo2' />
         <br /><br /><br /><br /><br /><br /><br />
         <div className='cajas'>
@@ -312,8 +346,13 @@ function App() {
             Proyecto Ganador de Hackacode 🌟
           </Frame2>
 
-          <Frame2 img={Arandu} herramientas={[[Android, "Plata"], [VSCode, "Oro"], [Java, "Oro"], [Node, "Plata"], [HTML, "Oro"], [CSS, "Oro"], [JS, "Oro"],
-          [Github, "Oro"], [GIT, "Oro"]]} funcionModal={establecerModal} contenido={[[Arandu, "Debido a que es un proyecto para un cliente no puedo revelar código acerca del mismo pero puedo mostrar muy pocas imágenes de como sería la app. Pero es una app de finanzas desarollada por mi empresa llamada Patito Software."], [Arandu2, "Acá se ve lo que sería el inicio de la aplicación móvil. Desarrollada con Java en AndroidStudio y que contará con una conexión a una Base De Datos."], [Arandu3, "Una página web que contará con Node y también se relacionará con una Base de Datos."]]}>
+          <Frame2 img={CodeVoid1} herramientas={[[VSCode, "Oro"], [React, "Oro"], [JS, "Oro"], [HTML, "Oro"], [CSS, "Oro"], [GIT, "Oro"], [Github, "Oro"]]} funcionModal={establecerModal} contenido={[[CodeVoid1, "Emprendimiento con un amigo en el cuál desarrollé una página web con animaciones, pantalla de carga y mejores prácticas logrando aumentar mi nivel. \n\n• Link a la página: https://codevoid.vercel.app"], [CodeVoid2, ""], [CodeVoid3, ""], [CodeVoid4, ""]]}>Página CodeVoid</Frame2>
+
+          <Frame2 img={DentalisTI} herramientas={[[VSCode, "Oro"], [Node, "Oro"], [Express, "Plata"], [React, "Oro"], [JS, "Oro"], [CSS, "Oro"], [GIT, "Oro"]]} funcionModal={establecerModal} contenido={[[DentalisT1, "Debido que es un proyecto para un cliente no puedo revelar código acerca del mismo pero puedo mostrar algunas imágenes de como es la app. Pero esto es una pantalla de carga. \n\n• Link a la página: https://dentalis.vercel.app"], [DentalisT3, "El inicio de la web que cuenta con la información esencial para contactar y conocer un poco más del consultorio."], [DentalisT2, "La página cuenta con dos apartados, pedir tratamiento o consulta en dónde cada uno tiene una duración predeterminada."], [DentalisT4, "Acá es dónde te permite seleccionar fecha y horario disponible para el turno."], [DentalisT5, "Por último cuenta con un formulario en dónde se rellenan los datos, y al pasar el tiempo y con día de anticipación al turno adquirido, se recibe un email de recordatorio. Esta web usa Vercel y Render para los deploy de Frontend y Backend."]]}>Proyecto Dentalis (Turnero)</Frame2>
+
+          <Frame2 img={DentalisI} herramientas={[[VisualStudio, "Oro"], [CSharp, "Plata"], [MySQL, "Oro"], [Github, "Oro"], [GIT, "Oro"]]} funcionModal={establecerModal} contenido={[[DentalisH1, "Debido que es un proyecto para un cliente no puedo revelar código acerca del mismo pero puedo mostrar algunas imágenes de como es la app."], [DentalisH2, "Consiste en un sistema de historias clínicas con odontograma incluido en dónde un dentista puede llevar registro de sus pacientes."], [DentalisH3, "Acá el odontograma mencionado anteriormente, dónde el dentista puede usar herramientas que se le provee en el programa para poder agregar prótesis o algún otro tratamiento que está cargado en el sistema."], [DentalisH4, "Acá es en si dónde se muestra todo el historial clínico que tiene un paciente acorde a lo que el odontograma y el dentista van agregando en la tabla. La tabla cuenta con códigos cargados que facilitan el trabajo de escribir el tratamiento relacionado al código que se ingresa."], [DentalisH5, "Por último, cuenta con impresión de la historia clínica asociada al paciente con el logo de Dentalis en el mismo documento. (Los datos se rellenan solos cuando se ingresan los datos en el apartado de datos clínicos) IMG2"]]}>Proyecto Dentalis (Historias)</Frame2>
+
+          <Frame2 img={Arandu} herramientas={[[Android, "Plata"], [VSCode, "Oro"], [Java, "Oro"], [Node, "Plata"], [HTML, "Oro"], [CSS, "Oro"], [JS, "Oro"], [Github, "Oro"], [GIT, "Oro"]]} funcionModal={establecerModal} contenido={[[Arandu, "Debido a que es un proyecto para un cliente no puedo revelar código acerca del mismo pero puedo mostrar muy pocas imágenes de como sería la app. Pero es una app de finanzas desarollada por mi empresa llamada Patito Software."], [Arandu2, "Acá se ve lo que sería el inicio de la aplicación móvil. Desarrollada con Java en AndroidStudio y que contará con una conexión a una Base De Datos."], [Arandu3, "Una página web que contará con Node y también se relacionará con una Base de Datos."]]}>
             Proyecto Arandu </Frame2>
 
           <Frame2 img={Facundo} herramientas={[[Netbeans, "Oro"], [Java, "Oro"], [SQLite, "Oro"], [Github, "Oro"], [GIT, "Oro"]]}
@@ -390,15 +429,19 @@ function App() {
         <br />
         <Title>Sobre Mi</Title>
         <br /><br /><br /><br /><br /><br /><br />
-        <div id='cajaSobreMi'>
+        <motion.div id='cajaSobreMi'
+          initial={{ opacity: 0, x: 100 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: false }}
+          transition={{ type: "spring", bounce: 0.5, duration: 2 }}>
           <div className='cajaPresentacion sobremi'>
             <h1>A continuación...</h1>
             <hr />
             <Carousel tipo={2} item={[["¡Hola! Soy Matías Abregú Danieli, un joven programador con mucha ambición. Bien... ¿Qué pueden esperar de mi? \n\nFortalezas: Líder (muy predispuesto a ayudar al resto), Resiliente, Perseverante, Autoexigente, Proactivo, Curioso, Determinado, Noble, Honesto, Responsable, Realista y Disciplinado."],
             ["Bien, ahora si te gustaría saber un poco más de mi para comprender muchas de las cosas que dije entonces lee a continuación porque te contaré más de mi... \n\nComo se mencionó en mi anterior portafolio soy un chico que busca ayudar a la gente a comprender mucho más la tecnología, en un mundo que cambia constantemente. Bien, realmente yo soy asi debido a que en mi familia soy el que más sabe de tecnología y siempre ando solucionando sus problemas, lo interesante es que yo descubrí mi pasión por la programación y las computadoras a la edad de 6 años. Desde entonces siempre quise involucrarme con todo su mundo, no fue hasta la edad de 14 años que decidí tener la iniciativa y aprendí a programar con un curso en internet sobre Java, el lenguaje con el que la gran mayoría de mis proyectos están hechos."], ["Lo gracioso es que a esa edad yo no me tomaba en serio la programación y sobre todo había comenzado a programar con un amigo que le SALIA TODO, en lo cual generó la creencia de que yo era un inútil para esto. Desde entonces abandoné la programación y no fue hasta los 16 años que volvi a retomarla pero esta vez aprendiendo C++ (Lenguaje con sintaxis compleja) pero que a mi a la larga no me generó complicación y pude programar alguna que otra cosita pequeña que me dio motivación pero a la larga la volvi a abandonar esta vez por los videojuegos. Entre años y años siempre fui muy curioso por explorar y aprender de TODO, lo cual hacia creer que tal vez la programación no era lo mio al fin y al cabo..."], ["Paso el tiempo y a fines de 2021 pensé, realmente ¿Qué estoy haciendo con mi vida? Fue ahi cuando dije, esto no puede ser asi, desde entonces comence con lo básico, entrenando mi cuerpo. Luego pase a adquirir habilidades sociales, luego dije que la programación era a lo que me quería dedicar dado que sino mi sueño no se haría realidad. En 2022 fue el gran cambio en mi vida, donde a día de hoy todo lo que hice lo sigo haciendo por más que no tenga ni una pizca de ganas e inclusive agregué nuevas tareas para endurecer más mi disciplina. Como dije, a día de hoy sigo haciendo todo e inclusive más lo más interesante es que gracias a mi concentración, exigencia, curiosidad y pasión (porque si, realmente me apasiona la programación sino no haría esto) he logrado hacer muchas cosas, desde programar una calculadora hasta hacer proyectos para gente de mi país y del extranjero, todos, trabajando codo a codo con amigos y compañeros."]]} />
           </div>
-          <Carousel tipo={1} item={[[Yo2022, "Yo en 2022"], [Yo2023Fines, "Mi físico que es el reflejo de mi disciplina y compromiso con las cosas"], [Yo2024, "Yo a principios de 2024"], [Yo2024Actual, "Yo con un regalo preciado de mi abuela actualmente en 2024"]]} />
-        </div>
+          <Carousel tipo={1} item={[[Yo2022, "Yo en 2022"], [Yo2024, "Yo a principios de 2024"], [Yo2024Actual, "Yo con un regalo preciado de mi abuela actualmente en 2024"]]} />
+        </motion.div>
         <br />
       </section>
       <section id='Contactame'>
@@ -412,7 +455,6 @@ function App() {
           <SocialIcon iconoNombre={"bi-discord"} direccion={"https://discord.com/users/292346182238470153"}>Discord</SocialIcon>
           <SocialIcon iconoNombre={"bi-envelope"} direccion={"mailto:matiasabregu506@gmail.com"}>Email</SocialIcon>
           <SocialIcon iconoNombre={"bi-instagram"} direccion={"https://www.instagram.com/matias_abregu08/"}>Instagram</SocialIcon>
-
         </div>
       </section>
       <br /><br /><br /><br />
