@@ -5,12 +5,13 @@ import { motion } from "framer-motion";
 export const Frame2 = ({ img, children, herramientas, funcionModal, contenido, estrella }) => {
 
     let herramientasEtiq;
-    let nombre = children.replaceAll(" ", "").replaceAll("á", "a").replaceAll(/[!#$%&/()=?¡¿-]/g, "");
+    let nombre = children[0].replaceAll(" ", "").replaceAll("á", "a").replaceAll(/[!#$%&/()=?¡¿-]/g, "");
 
     if (herramientas) {
         herramientasEtiq = herramientas.map((h, i) => <SkillIcon2 img={h[0]} nivel={h[1]} key={i}></SkillIcon2>)
     }
 
+    console.log(typeof children);
     return (
         <motion.div className={`cajaProyecto ${estrella ? "estrella" : ""}`} id={nombre} onClick={() => funcionModal(contenido)}
             initial={{ opacity: 0, y: 100 }}
